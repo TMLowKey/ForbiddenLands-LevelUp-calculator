@@ -157,8 +157,109 @@ std::map<std::string, int> attributeDict {
     { "Empathy", 0 },
 };
 
+std::map<std::string, int> skillDict {
+    { "Might", 0 },
+    { "Endurance", 0 },
+    { "Melee", 0 },
+    { "Crafting", 0 },
+    { "Stealth", 0 },
+    { "Sleight of Hand", 0 },
+    { "Move", 0 },
+    { "Marksmanship", 0 },
+    { "Scouting", 0 },
+    { "Lore", 0 },
+    { "Survival", 0 },
+    { "Insight", 0 },
+    { "Manipulation", 0 },
+    { "Performance", 0 },
+    { "Healing", 0 },
+    { "Animal Handling", 0 },
+};
 
+std::map<std::string, int> generalTalentsDict {
+    { "Ambidextrous", 0 },
+    { "Axe Fighter", 0 },
+    { "Berserker", 0 },
+    { "Bowyer", 0 },
+    { "Brawler", 0 },
+    { "Builder", 0 },
+    { "Chef", 0 },
+    { "Cold Blooded", 0 },
+    { "Defender", 0 },
+    { "Dragonslayer", 0 },
+    { "Executioner", 0 },
+    { "Fast Footwork", 0 },
+    { "Fast Shooter", 0 },
+    { "Fearless", 0 },
+    { "Firm Grip", 0 },
+    { "Fisher", 0 },
+    { "Hammer Fighter", 0 },
+    { "Herbalist", 0 },
+    { "Horseback Fighter", 0 },
+    { "Incorruptible", 0 },
+    { "Knife Fighter", 0 },
+    { "Lightning Fast", 0 },
+    { "Lockpicker", 0 },
+    { "Lucky", 0 },
+    { "Master of the Hunt", 0 },
+    { "Melee Charge", 0 },
+    { "Pack Rat", 0 },
+    { "Pain Resistant", 0 },
+    { "Pathfinder", 0 },
+    { "Poisoner", 0 },
+    { "Quartermaster", 0 },
+    { "Quickdraw", 0 },
+    { "Sailor", 0 },
+    { "Sharpshooter", 0 },
+    { "Sharp Tongue", 0 },
+    { "Shield Fighter", 0 },
+    { "Sixth Sense", 0 },
+    { "Smith", 0 },
+    { "Spear Fighter", 0 },
+    { "Steady Feet", 0 },
+    { "Sword Fighter", 0 },
+    { "Tailor", 0 },
+    { "Tanner", 0 },
+    { "Threatening", 0 },
+    { "Throwing Arm", 0 },
+    { "Wanderer", 0 },
+};
 
+std::map<std::string, int> classTalentsDict {
+    //"THE DRUID'S TALENTS",
+    { "Path of Healing", 0 },
+    { "Path of Shifting Shapes", 0 },
+    { "Path of Sight", 0 },
+        //"THE FIGHTER'S TALENTS",
+    { "Path of The Blade", 0 },
+    { "Path of The Enemy", 0 },
+    { "Path of The Shield", 0 },
+        //"THE HUNTER'S TALENTS",
+    { "Path of The Arrow", 0 },
+    { "Path of The Beast", 0 },
+    { "Path of The Forest", 0 },
+        //"THE MINSTREL'S TALENTS",
+    { "Path of The Hymn", 0 },
+    { "Path of The Song", 0 },
+    { "Path of The Warcry", 0 },
+        //"THE PEDDLER'S TALENTS",
+    { "Path of Gold", 0 },
+    { "Path of Lies", 0 },
+    { "Path of Many Things", 0 },
+        //"THE RIDER'S TALENTS",
+    { "Path of The Companion", 0 },
+    { "Path of The Knight", 0 },
+    { "Path of The Plains", 0 },
+        //"THE ROGUE'S TALENTS",
+    { "Path of The Face", 0 },
+    { "Path of The Killer", 0 },
+    { "Path of Poison", 0 },
+        //"THE SORCERER'S TALENTS",
+    { "Path of Blood", 0 },
+    { "Path of Death", 0 },
+    { "Path of Signs", 0 },
+    { "Path of Stone", 0 },
+};
 
 // CUSTOM FUNCTIONS
 void AddTalentSlider(const char* talentName, int& talentValue)
@@ -392,7 +493,7 @@ int main(int, char**)
                 static int wits = MIN_LEVEL;
                 static int empathy = MIN_LEVEL;
 
-                AddAttributeOrSkill("strength", attributeDict["strength"], "agility", agility, "wits", wits, "empathy", empathy);
+                AddAttributeOrSkill("strength", attributeDict["strength"], "agility", attributeDict["agility"], "wits", attributeDict["wits"], "empathy", attributeDict["empathy"]);
 
                 ImGui::TableNextRow();
 
@@ -401,7 +502,7 @@ int main(int, char**)
                 static int scouting = MIN_LEVEL;
                 static int manipulation = MIN_LEVEL;
 
-                AddAttributeOrSkill("might", might, "stealth", stealth, "scouting", scouting, "manipulation", manipulation);
+                AddAttributeOrSkill("might", skillDict["might"], "stealth", skillDict["stealth"], "scouting", skillDict["scouting"], "manipulation", skillDict["manipulation"]);
                 ImGui::TableNextRow();
 
                 static int endurance = MIN_LEVEL;
@@ -409,7 +510,7 @@ int main(int, char**)
                 static int lore = MIN_LEVEL;
                 static int performance = MIN_LEVEL;
 
-                AddAttributeOrSkill("endurance", endurance, "sleightofhands", sleightofhands, "lore", lore, "performance", performance);
+                AddAttributeOrSkill("endurance", skillDict["endurance"], "sleightofhands", skillDict["sleightofhands"], "lore", skillDict["lore"], "performance", skillDict["performance"]);
                 ImGui::TableNextRow();
 
                 static int melee = MIN_LEVEL;
@@ -417,7 +518,7 @@ int main(int, char**)
                 static int survival = MIN_LEVEL;
                 static int healing = MIN_LEVEL;
 
-                AddAttributeOrSkill("melee", melee, "move", move, "survival", survival, "healing", healing);
+                AddAttributeOrSkill("melee", skillDict["melee"], "move", skillDict["move"], "survival", skillDict["survival"], "healing", skillDict["healing"]);
 
                 ImGui::TableNextRow();
 
@@ -426,7 +527,7 @@ int main(int, char**)
                 static int insight = MIN_LEVEL;
                 static int animalhandling = MIN_LEVEL;
 
-                AddAttributeOrSkill("crafting", crafting, "markmanship", markmanship, "insight", insight, "animalhandling", animalhandling);
+                AddAttributeOrSkill("crafting", skillDict["crafting"], "markmanship", skillDict["markmanship"], "insight", skillDict["insight"], "animalhandling", skillDict["animalhandling"]);
 
                 ImGui::EndTable();
             
@@ -459,133 +560,133 @@ int main(int, char**)
             */
             
             static int ambidextrous = MIN_LEVEL;
-            AddTalentSlider("Ambidextrous", ambidextrous);
+            AddTalentSlider("Ambidextrous", skillDict["ambidextrous"]);
 
             static int axefighter = MIN_LEVEL;
-            AddTalentSlider("Axe Fighter", axefighter);
+            AddTalentSlider("Axe Fighter", skillDict["axefighter"]);
 
             static int berserk = MIN_LEVEL;
-            AddTalentSlider("Berserk", berserk);
+            AddTalentSlider("Berserk", skillDict["berserk"]);
 
             static int bowyer = MIN_LEVEL;
-            AddTalentSlider("Bowyer", bowyer);
+            AddTalentSlider("Bowyer", skillDict["bowyer"]);
 
             static int builder = MIN_LEVEL;
-            AddTalentSlider("Builder", builder);
+            AddTalentSlider("Builder", skillDict["builder"]);
 
             static int chef = MIN_LEVEL;
-            AddTalentSlider("Chef", chef);
+            AddTalentSlider("Chef", skillDict["chef"]);
 
             static int coldblooded = MIN_LEVEL;
-            AddTalentSlider("Cold Blooded", coldblooded);
+            AddTalentSlider("Cold Blooded", skillDict["coldblooded"]);
 
             static int defender = MIN_LEVEL;
-            AddTalentSlider("Defender", defender);
+            AddTalentSlider("Defender", skillDict["defender"]);
 
             static int dragonslayer = MIN_LEVEL;
-            AddTalentSlider("Dragon Slayer", dragonslayer);
+            AddTalentSlider("Dragon Slayer", skillDict["dragonslayer"]);
 
             static int executioner = MIN_LEVEL;
-            AddTalentSlider("Executioner", executioner);
+            AddTalentSlider("Executioner", skillDict["executioner"]);
 
-            static int fastfootwork= MIN_LEVEL;
-            AddTalentSlider("Fast Footwork", fastfootwork);
+            static int fastfootwork = MIN_LEVEL;
+            AddTalentSlider("Fast Footwork", skillDict["fastfootwork"]);
 
             static int fastshooter = MIN_LEVEL;
-            AddTalentSlider("Fast Shooter", fastshooter);
+            AddTalentSlider("Fast Shooter", skillDict["fastshooter"]);
 
             static int firmgrip = MIN_LEVEL;
-            AddTalentSlider("Firm Grip", firmgrip);
+            AddTalentSlider("Firm Grip", skillDict["firmgrip"]);
 
             static int fisher = MIN_LEVEL;
-            AddTalentSlider("Fisher", fisher);
+            AddTalentSlider("Fisher", skillDict["fisher"]);
 
             static int hammerfighter = MIN_LEVEL;
-            AddTalentSlider("Hammer Fighter", hammerfighter);
+            AddTalentSlider("Hammer Fighter", skillDict["hammerfighter"]);
 
             static int herbalist = MIN_LEVEL;
-            AddTalentSlider("Herbalist", herbalist);
+            AddTalentSlider("Herbalist", skillDict["herbalist"]);
 
             static int horsebackfighter = MIN_LEVEL;
-            AddTalentSlider("Horseback Fighter", horsebackfighter);
+            AddTalentSlider("Horseback Fighter", skillDict["horsebackfighter"]);
 
             static int incorruptible = MIN_LEVEL;
-            AddTalentSlider("Incorruptible", incorruptible);
+            AddTalentSlider("Incorruptible", skillDict["incorruptible"]);
 
             static int knifefighter = MIN_LEVEL;
-            AddTalentSlider("Knife Fighter", knifefighter);
+            AddTalentSlider("Knife Fighter", skillDict["knifefighter"]);
 
             static int lockpicker = MIN_LEVEL;
-            AddTalentSlider("Lockpicker", lockpicker);
+            AddTalentSlider("Lockpicker", skillDict["lockpicker"]);
 
             static int lucky = MIN_LEVEL;
-            AddTalentSlider("Lucky", lucky);
+            AddTalentSlider("Lucky", skillDict["lucky"]);
 
             static int masterofthehunt = MIN_LEVEL;
-            AddTalentSlider("Master of the Hunt", masterofthehunt);
+            AddTalentSlider("Master of the Hunt", skillDict["masterofthehunt"]);
 
             static int meleecharge = MIN_LEVEL;
-            AddTalentSlider("Melee Charge", meleecharge);
+            AddTalentSlider("Melee Charge", skillDict["meleecharge"]);
 
             static int packrat = MIN_LEVEL;
-            AddTalentSlider("Pack Rat", packrat);
+            AddTalentSlider("Pack Rat", skillDict["packrat"]);
 
             static int painresistant = MIN_LEVEL;
-            AddTalentSlider("Pain Resistant", painresistant);
+            AddTalentSlider("Pain Resistant", skillDict["painresistant"]);
 
             static int pathfinder = MIN_LEVEL;
-            AddTalentSlider("Pathfinder", pathfinder);
+            AddTalentSlider("Pathfinder", skillDict["pathfinder"]);
 
             static int poisoner = MIN_LEVEL;
-            AddTalentSlider("Poisoner", poisoner);
+            AddTalentSlider("Poisoner", skillDict["poisoner"]);
 
             static int quartermaster = MIN_LEVEL;
-            AddTalentSlider("Quartermaster", quartermaster);
+            AddTalentSlider("Quartermaster", skillDict["quartermaster"]);
 
             static int quickdraw = MIN_LEVEL;
-            AddTalentSlider("Quickdraw", quickdraw);
+            AddTalentSlider("Quickdraw", skillDict["quickdraw"]);
 
             static int sailor = MIN_LEVEL;
-            AddTalentSlider("Sailor", sailor);
+            AddTalentSlider("Sailor", skillDict["sailor"]);
 
             static int sharpshooter = MIN_LEVEL;
-            AddTalentSlider("Sharpshooter", sharpshooter);
+            AddTalentSlider("Sharpshooter", skillDict["sharpshooter"]);
 
-            static int sharptongue= MIN_LEVEL;
-            AddTalentSlider("Sharp Tongue", sharptongue);
+            static int sharptongue = MIN_LEVEL;
+            AddTalentSlider("Sharp Tongue", skillDict["sharptongue"]);
 
             static int shieldfighter = MIN_LEVEL;
-            AddTalentSlider("Shield Fighter", shieldfighter);
+            AddTalentSlider("Shield Fighter", skillDict["shieldfighter"]);
 
             static int sixthsense = MIN_LEVEL;
-            AddTalentSlider("Sixth Sense", sixthsense);
+            AddTalentSlider("Sixth Sense", skillDict["sixthsense"]);
 
             static int smith = MIN_LEVEL;
-            AddTalentSlider("Smith", smith);
+            AddTalentSlider("Smith", skillDict["smith"]);
 
             static int spearfighter = MIN_LEVEL;
-            AddTalentSlider("Spear Fighter", spearfighter);
+            AddTalentSlider("Spear Fighter", skillDict["spearfighter"]);
 
             static int steadyfeet = MIN_LEVEL;
-            AddTalentSlider("Steady Feet", steadyfeet);
+            AddTalentSlider("Steady Feet", skillDict["steadyfeet"]);
 
             static int swordfighter = MIN_LEVEL;
-            AddTalentSlider("Sword Fighter", swordfighter);
+            AddTalentSlider("Sword Fighter", skillDict["swordfighter"]);
 
             static int tailor = MIN_LEVEL;
-            AddTalentSlider("Tailor", tailor);
-            
+            AddTalentSlider("Tailor", skillDict["tailor"]);
+
             static int tanner = MIN_LEVEL;
-            AddTalentSlider("Tanner", tanner);
+            AddTalentSlider("Tanner", skillDict["tanner"]);
 
             static int threatening = MIN_LEVEL;
-            AddTalentSlider("Threatening", threatening);
+            AddTalentSlider("Threatening", skillDict["threatening"]);
 
             static int throwingarm = MIN_LEVEL;
-            AddTalentSlider("Throwing Arm", throwingarm);
+            AddTalentSlider("Throwing Arm", skillDict["throwingarm"]);
 
             static int wanderer = MIN_LEVEL;
-            AddTalentSlider("Wanderer", wanderer);
+            AddTalentSlider("Wanderer", skillDict["wanderer"]);
 
             ImGui::EndTable();
 
@@ -597,43 +698,43 @@ int main(int, char**)
             static int pathofshiftingshapes = MIN_LEVEL;
             static int pathofsight = MIN_LEVEL;
 
-            AddClass("Druid", "Druid's talents", "Path of the Healing", "Path of the Shifting Shapes", "Path of the Sight", pathofhealing, pathofshiftingshapes, pathofsight);
+            AddClass("Druid", "Druid's talents", "Path of the Healing", "Path of the Shifting Shapes", "Path of the Sight", classTalentsDict["pathofhealing"], classTalentsDict["pathofshiftingshapes"], classTalentsDict["pathofsight"]);
 
             static int pathofblade = MIN_LEVEL;
             static int pathofenemy = MIN_LEVEL;
             static int pathofshield = MIN_LEVEL;
 
-            AddClass("Fighter", "Fighter's talents", "Path of the Blade", "Path of the Enemy", "Path of the Shield", pathofblade, pathofenemy, pathofshield);
+            AddClass("Fighter", "Fighter's talents", "Path of the Blade", "Path of the Enemy", "Path of the Shield", classTalentsDict["pathofblade"], classTalentsDict["pathofenemy"], classTalentsDict["pathofshield"]);
 
             static int pathofarrow = MIN_LEVEL;
             static int pathofbeast = MIN_LEVEL;
             static int pathofforest = MIN_LEVEL;
 
-            AddClass("Hunter", "Hunter's talents", "Path of the Arrow", "Path of the Beast", "Path of the Forest", pathofarrow, pathofbeast, pathofforest);
+            AddClass("Hunter", "Hunter's talents", "Path of the Arrow", "Path of the Beast", "Path of the Forest", classTalentsDict["pathofarrow"], classTalentsDict["pathofbeast"], classTalentsDict["pathofforest"]);
 
             static int pathofthehymn = MIN_LEVEL;
             static int pathofsong = MIN_LEVEL;
             static int pathofwarcry = MIN_LEVEL;
 
-            AddClass("Ministrel", "Ministrel's talents", "Path of the Hymn", "Path of the Song", "Path of the Warcry", pathofthehymn, pathofsong, pathofwarcry);
+            AddClass("Ministrel", "Ministrel's talents", "Path of the Hymn", "Path of the Song", "Path of the Warcry", classTalentsDict["pathofthehymn"], classTalentsDict["pathofsong"], classTalentsDict["pathofwarcry"]);
 
             static int pathofthegold = MIN_LEVEL;
             static int pathoflies = MIN_LEVEL;
             static int pathofmanythings = MIN_LEVEL;
 
-            AddClass("Peddler", "Peddler's talents", "Path of the Gold", "Path of the Lies", "Path of the Many Things", pathofthegold, pathoflies, pathofmanythings);
+            AddClass("Peddler", "Peddler's talents", "Path of the Gold", "Path of the Lies", "Path of the Many Things", classTalentsDict["pathofthegold"], classTalentsDict["pathoflies"], classTalentsDict["pathofmanythings"]);
 
             static int pathofthecompanion = MIN_LEVEL;
             static int pathofknight = MIN_LEVEL;
             static int pathofplains = MIN_LEVEL;
 
-            AddClass("Rider", "Rider's talents", "Path of the Companion", "Path of the Knight", "Path of the Plains", pathofthecompanion, pathofknight, pathofplains);
+            AddClass("Rider", "Rider's talents", "Path of the Companion", "Path of the Knight", "Path of the Plains", classTalentsDict["pathofthecompanion"], classTalentsDict["pathofknight"], classTalentsDict["pathofplains"]);
 
             static int pathoftheface = MIN_LEVEL;
             static int pathofkiller = MIN_LEVEL;
             static int pathofpoison = MIN_LEVEL;
 
-            AddClass("Rogue", "Rogue's talents", "Path of the Face", "Path of the Killer", "Path of Poison", pathoftheface, pathofkiller, pathofpoison);
+            AddClass("Rogue", "Rogue's talents", "Path of the Face", "Path of the Killer", "Path of Poison", classTalentsDict["pathoftheface"], classTalentsDict["pathofkiller"], classTalentsDict["pathofpoison"]);
 
             ImGui::TableNextRow();
             ImGui::TableSetColumnIndex(0);
@@ -646,13 +747,13 @@ int main(int, char**)
                 static int pathofsigns = MIN_LEVEL;
                 static int pathofstone = MIN_LEVEL;
 
-                AddTalentSlider("Path of Blood", pathofblood);
+                AddTalentSlider("Path of Blood", classTalentsDict["pathofblood"]);
 
-                AddTalentSlider("Path of Death", pathofdeath);
+                AddTalentSlider("Path of Death", classTalentsDict["pathofdeath"]);
 
-                AddTalentSlider("Path of Signs", pathofsigns);
+                AddTalentSlider("Path of Signs", classTalentsDict["pathofsigns"]);
 
-                AddTalentSlider("Path of Stone", pathofstone);
+                AddTalentSlider("Path of Stone", classTalentsDict["pathofstone"]);
 
                 ImGui::EndTable();
             }
@@ -705,7 +806,9 @@ int main(int, char**)
                 }
             }
 
-            ImGui::Text("%d", attributeDict["strength"]);
+            ImGui::Text("%d", attributeDict["agility"]);
+            ImGui::Text("%d", skillDict["might"]);
+
 
             ImGui::End();
         }
