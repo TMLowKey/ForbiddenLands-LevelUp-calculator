@@ -35,6 +35,8 @@ static void glfw_error_callback(int error, const char* description)
 #include <vector>
 #include <cctype>
 #include <map>
+#include <iostream>
+
 
 // CONST
 const int MAX_LEVEL = 10;
@@ -488,12 +490,13 @@ int main(int, char**)
 
                 ImGui::TableNextRow();
 
-                static int strength = attributeDict["strength"];
+                static int strength = MIN_LEVEL;
                 static int agility = MIN_LEVEL;
                 static int wits = MIN_LEVEL;
                 static int empathy = MIN_LEVEL;
 
-                AddAttributeOrSkill("strength", attributeDict["strength"], "agility", attributeDict["agility"], "wits", attributeDict["wits"], "empathy", attributeDict["empathy"]);
+
+                AddAttributeOrSkill("strength", attributeDict["Strength"], "agility", attributeDict["Agility"], "wits", attributeDict["Wits"], "empathy", attributeDict["Empathy"]);
 
                 ImGui::TableNextRow();
 
@@ -766,6 +769,7 @@ int main(int, char**)
 
             const char* items[] = { "Attribute", "Skill", "General Talent", "Class Talent"};
             static int item_current = 0;
+
             ImGui::Combo("##combo", &item_current, items, IM_ARRAYSIZE(items));
 
             static int choosenAttribute = 0;
@@ -799,15 +803,18 @@ int main(int, char**)
             ImGui::Text("You gonna need:");
             if (clicked & 1)
             {
-                if (choosenSkill == 0)
-                {
-                    if (might == 0)
-                        ImGui::Text("%d xp", cost);
-                }
+
             }
 
-            ImGui::Text("%d", attributeDict["agility"]);
-            ImGui::Text("%d", skillDict["might"]);
+
+            for (const auto& pair : attributeDict) {
+                ImGui::Text(pair.first.c_str());
+                ImGui::Text(std::to_string(pair.second).c_str());
+            
+            }
+
+            //ImGui::Text("%d", attributeDict["agility"]);
+
 
 
             ImGui::End();
