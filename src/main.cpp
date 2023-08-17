@@ -39,7 +39,7 @@ static void glfw_error_callback(int error, const char* description)
 
 
 // CONST
-const int MAX_LEVEL = 10;
+const int MAX_LEVEL = 5;
 const int MIN_LEVEL = 0;
 const char* attributeList[] = {
     "Strength", 
@@ -363,7 +363,64 @@ void AddAttributeOrSkill(const char* element1, int& element1Value, const char* e
     element4Value = std::min(std::max(element4Value, MIN_LEVEL), MAX_LEVEL);
 }
 
+int CalculateXPCostOfSkills(const char* skill1, const char* skill2, const char* skill3, const char* skill4)
+{
+    int m_XPCost = 0;
 
+    if (skillDict[skill1] == 0)
+        m_XPCost += 5;
+    if (skillDict[skill1] == 1)
+        m_XPCost += 10;
+    if (skillDict[skill1] == 2)
+        m_XPCost += 15;
+    if (skillDict[skill1] == 3)
+        m_XPCost += 20;
+    if (skillDict[skill1] == 4)
+        m_XPCost += 25;
+    if (skillDict[skill1] == 5)
+        m_XPCost += 30;
+
+    if (skillDict[skill2] == 0)
+        m_XPCost += 5;
+    if (skillDict[skill2] == 1)
+        m_XPCost += 10;
+    if (skillDict[skill2] == 2)
+        m_XPCost += 15;
+    if (skillDict[skill2] == 3)
+        m_XPCost += 20;
+    if (skillDict[skill2] == 4)
+        m_XPCost += 25;
+    if (skillDict[skill2] == 5)
+        m_XPCost += 30;
+
+    if (skillDict[skill3] == 0)
+        m_XPCost += 5;
+    if (skillDict[skill3] == 1)
+        m_XPCost += 10;
+    if (skillDict[skill3] == 2)
+        m_XPCost += 15;
+    if (skillDict[skill3] == 3)
+        m_XPCost += 20;
+    if (skillDict[skill3] == 4)
+        m_XPCost += 25;
+    if (skillDict[skill3] == 5)
+        m_XPCost += 30;
+
+    if (skillDict[skill4] == 0)
+        m_XPCost += 5;
+    if (skillDict[skill4] == 1)
+        m_XPCost += 10;
+    if (skillDict[skill4] == 2)
+        m_XPCost += 15;
+    if (skillDict[skill4] == 3)
+        m_XPCost += 20;
+    if (skillDict[skill4] == 4)
+        m_XPCost += 25;
+    if (skillDict[skill4] == 5)
+        m_XPCost += 30;
+
+    return m_XPCost;
+}
 
 // Main code
 int main(int, char**)
@@ -505,7 +562,7 @@ int main(int, char**)
                 static int scouting = MIN_LEVEL;
                 static int manipulation = MIN_LEVEL;
 
-                AddAttributeOrSkill("might", skillDict["might"], "stealth", skillDict["stealth"], "scouting", skillDict["scouting"], "manipulation", skillDict["manipulation"]);
+                AddAttributeOrSkill("might", skillDict["Might"], "stealth", skillDict["Stealth"], "scouting", skillDict["Scouting"], "manipulation", skillDict["Manipulation"]);
                 ImGui::TableNextRow();
 
                 static int endurance = MIN_LEVEL;
@@ -513,7 +570,7 @@ int main(int, char**)
                 static int lore = MIN_LEVEL;
                 static int performance = MIN_LEVEL;
 
-                AddAttributeOrSkill("endurance", skillDict["endurance"], "sleightofhands", skillDict["sleightofhands"], "lore", skillDict["lore"], "performance", skillDict["performance"]);
+                AddAttributeOrSkill("endurance", skillDict["Endurance"], "sleightofhands", skillDict["Sleightofhands"], "lore", skillDict["Lore"], "performance", skillDict["Performance"]);
                 ImGui::TableNextRow();
 
                 static int melee = MIN_LEVEL;
@@ -521,7 +578,7 @@ int main(int, char**)
                 static int survival = MIN_LEVEL;
                 static int healing = MIN_LEVEL;
 
-                AddAttributeOrSkill("melee", skillDict["melee"], "move", skillDict["move"], "survival", skillDict["survival"], "healing", skillDict["healing"]);
+                AddAttributeOrSkill("melee", skillDict["Melee"], "move", skillDict["Move"], "survival", skillDict["Survival"], "healing", skillDict["Healing"]);
 
                 ImGui::TableNextRow();
 
@@ -530,7 +587,7 @@ int main(int, char**)
                 static int insight = MIN_LEVEL;
                 static int animalhandling = MIN_LEVEL;
 
-                AddAttributeOrSkill("crafting", skillDict["crafting"], "markmanship", skillDict["markmanship"], "insight", skillDict["insight"], "animalhandling", skillDict["animalhandling"]);
+                AddAttributeOrSkill("crafting", skillDict["Crafting"], "markmanship", skillDict["Markmanship"], "insight", skillDict["Insight"], "animalhandling", skillDict["Animalhandling"]);
 
                 ImGui::EndTable();
             
@@ -563,133 +620,133 @@ int main(int, char**)
             */
             
             static int ambidextrous = MIN_LEVEL;
-            AddTalentSlider("Ambidextrous", skillDict["ambidextrous"]);
+            AddTalentSlider("Ambidextrous", skillDict["Ambidextrous"]);
 
             static int axefighter = MIN_LEVEL;
-            AddTalentSlider("Axe Fighter", skillDict["axefighter"]);
+            AddTalentSlider("Axe Fighter", skillDict["Axefighter"]);
 
             static int berserk = MIN_LEVEL;
-            AddTalentSlider("Berserk", skillDict["berserk"]);
+            AddTalentSlider("Berserk", skillDict["Berserk"]);
 
             static int bowyer = MIN_LEVEL;
-            AddTalentSlider("Bowyer", skillDict["bowyer"]);
+            AddTalentSlider("Bowyer", skillDict["Bowyer"]);
 
             static int builder = MIN_LEVEL;
-            AddTalentSlider("Builder", skillDict["builder"]);
+            AddTalentSlider("Builder", skillDict["Builder"]);
 
             static int chef = MIN_LEVEL;
-            AddTalentSlider("Chef", skillDict["chef"]);
+            AddTalentSlider("Chef", skillDict["Chef"]);
 
             static int coldblooded = MIN_LEVEL;
-            AddTalentSlider("Cold Blooded", skillDict["coldblooded"]);
+            AddTalentSlider("Cold Blooded", skillDict["Coldblooded"]);
 
             static int defender = MIN_LEVEL;
-            AddTalentSlider("Defender", skillDict["defender"]);
+            AddTalentSlider("Defender", skillDict["Defender"]);
 
             static int dragonslayer = MIN_LEVEL;
-            AddTalentSlider("Dragon Slayer", skillDict["dragonslayer"]);
+            AddTalentSlider("Dragon Slayer", skillDict["Dragonslayer"]);
 
             static int executioner = MIN_LEVEL;
-            AddTalentSlider("Executioner", skillDict["executioner"]);
+            AddTalentSlider("Executioner", skillDict["Executioner"]);
 
             static int fastfootwork = MIN_LEVEL;
-            AddTalentSlider("Fast Footwork", skillDict["fastfootwork"]);
+            AddTalentSlider("Fast Footwork", skillDict["Fastfootwork"]);
 
             static int fastshooter = MIN_LEVEL;
-            AddTalentSlider("Fast Shooter", skillDict["fastshooter"]);
+            AddTalentSlider("Fast Shooter", skillDict["Fastshooter"]);
 
             static int firmgrip = MIN_LEVEL;
-            AddTalentSlider("Firm Grip", skillDict["firmgrip"]);
+            AddTalentSlider("Firm Grip", skillDict["Firmgrip"]);
 
             static int fisher = MIN_LEVEL;
-            AddTalentSlider("Fisher", skillDict["fisher"]);
+            AddTalentSlider("Fisher", skillDict["Fisher"]);
 
             static int hammerfighter = MIN_LEVEL;
-            AddTalentSlider("Hammer Fighter", skillDict["hammerfighter"]);
+            AddTalentSlider("Hammer Fighter", skillDict["Hammerfighter"]);
 
             static int herbalist = MIN_LEVEL;
-            AddTalentSlider("Herbalist", skillDict["herbalist"]);
+            AddTalentSlider("Herbalist", skillDict["Herbalist"]);
 
             static int horsebackfighter = MIN_LEVEL;
-            AddTalentSlider("Horseback Fighter", skillDict["horsebackfighter"]);
+            AddTalentSlider("Horseback Fighter", skillDict["Horsebackfighter"]);
 
             static int incorruptible = MIN_LEVEL;
-            AddTalentSlider("Incorruptible", skillDict["incorruptible"]);
+            AddTalentSlider("Incorruptible", skillDict["Incorruptible"]);
 
             static int knifefighter = MIN_LEVEL;
-            AddTalentSlider("Knife Fighter", skillDict["knifefighter"]);
+            AddTalentSlider("Knife Fighter", skillDict["Knifefighter"]);
 
             static int lockpicker = MIN_LEVEL;
-            AddTalentSlider("Lockpicker", skillDict["lockpicker"]);
+            AddTalentSlider("Lockpicker", skillDict["Lockpicker"]);
 
             static int lucky = MIN_LEVEL;
-            AddTalentSlider("Lucky", skillDict["lucky"]);
+            AddTalentSlider("Lucky", skillDict["Lucky"]);
 
             static int masterofthehunt = MIN_LEVEL;
-            AddTalentSlider("Master of the Hunt", skillDict["masterofthehunt"]);
+            AddTalentSlider("Master of the Hunt", skillDict["Masterofthehunt"]);
 
             static int meleecharge = MIN_LEVEL;
-            AddTalentSlider("Melee Charge", skillDict["meleecharge"]);
+            AddTalentSlider("Melee Charge", skillDict["Meleecharge"]);
 
             static int packrat = MIN_LEVEL;
-            AddTalentSlider("Pack Rat", skillDict["packrat"]);
+            AddTalentSlider("Pack Rat", skillDict["Packrat"]);
 
             static int painresistant = MIN_LEVEL;
-            AddTalentSlider("Pain Resistant", skillDict["painresistant"]);
+            AddTalentSlider("Pain Resistant", skillDict["Painresistant"]);
 
             static int pathfinder = MIN_LEVEL;
-            AddTalentSlider("Pathfinder", skillDict["pathfinder"]);
+            AddTalentSlider("Pathfinder", skillDict["Pathfinder"]);
 
             static int poisoner = MIN_LEVEL;
-            AddTalentSlider("Poisoner", skillDict["poisoner"]);
+            AddTalentSlider("Poisoner", skillDict["Poisoner"]);
 
             static int quartermaster = MIN_LEVEL;
-            AddTalentSlider("Quartermaster", skillDict["quartermaster"]);
+            AddTalentSlider("Quartermaster", skillDict["Quartermaster"]);
 
             static int quickdraw = MIN_LEVEL;
-            AddTalentSlider("Quickdraw", skillDict["quickdraw"]);
+            AddTalentSlider("Quickdraw", skillDict["Quickdraw"]);
 
             static int sailor = MIN_LEVEL;
-            AddTalentSlider("Sailor", skillDict["sailor"]);
+            AddTalentSlider("Sailor", skillDict["Sailor"]);
 
             static int sharpshooter = MIN_LEVEL;
-            AddTalentSlider("Sharpshooter", skillDict["sharpshooter"]);
+            AddTalentSlider("Sharpshooter", skillDict["Sharpshooter"]);
 
             static int sharptongue = MIN_LEVEL;
-            AddTalentSlider("Sharp Tongue", skillDict["sharptongue"]);
+            AddTalentSlider("Sharp Tongue", skillDict["Sharptongue"]);
 
             static int shieldfighter = MIN_LEVEL;
-            AddTalentSlider("Shield Fighter", skillDict["shieldfighter"]);
+            AddTalentSlider("Shield Fighter", skillDict["Shieldfighter"]);
 
             static int sixthsense = MIN_LEVEL;
-            AddTalentSlider("Sixth Sense", skillDict["sixthsense"]);
+            AddTalentSlider("Sixth Sense", skillDict["Sixthsense"]);
 
             static int smith = MIN_LEVEL;
-            AddTalentSlider("Smith", skillDict["smith"]);
+            AddTalentSlider("Smith", skillDict["Smith"]);
 
             static int spearfighter = MIN_LEVEL;
-            AddTalentSlider("Spear Fighter", skillDict["spearfighter"]);
+            AddTalentSlider("Spear Fighter", skillDict["Spearfighter"]);
 
             static int steadyfeet = MIN_LEVEL;
-            AddTalentSlider("Steady Feet", skillDict["steadyfeet"]);
+            AddTalentSlider("Steady Feet", skillDict["Steadyfeet"]);
 
             static int swordfighter = MIN_LEVEL;
-            AddTalentSlider("Sword Fighter", skillDict["swordfighter"]);
+            AddTalentSlider("Sword Fighter", skillDict["Swordfighter"]);
 
             static int tailor = MIN_LEVEL;
-            AddTalentSlider("Tailor", skillDict["tailor"]);
+            AddTalentSlider("Tailor", skillDict["Tailor"]);
 
             static int tanner = MIN_LEVEL;
-            AddTalentSlider("Tanner", skillDict["tanner"]);
+            AddTalentSlider("Tanner", skillDict["Tanner"]);
 
             static int threatening = MIN_LEVEL;
-            AddTalentSlider("Threatening", skillDict["threatening"]);
+            AddTalentSlider("Threatening", skillDict["Threatening"]);
 
             static int throwingarm = MIN_LEVEL;
-            AddTalentSlider("Throwing Arm", skillDict["throwingarm"]);
+            AddTalentSlider("Throwing Arm", skillDict["Throwingarm"]);
 
             static int wanderer = MIN_LEVEL;
-            AddTalentSlider("Wanderer", skillDict["wanderer"]);
+            AddTalentSlider("Wanderer", skillDict["Wanderer"]);
 
             ImGui::EndTable();
 
@@ -701,43 +758,43 @@ int main(int, char**)
             static int pathofshiftingshapes = MIN_LEVEL;
             static int pathofsight = MIN_LEVEL;
 
-            AddClass("Druid", "Druid's talents", "Path of the Healing", "Path of the Shifting Shapes", "Path of the Sight", classTalentsDict["pathofhealing"], classTalentsDict["pathofshiftingshapes"], classTalentsDict["pathofsight"]);
+            AddClass("Druid", "Druid's talents", "Path of the Healing", "Path of the Shifting Shapes", "Path of the Sight", classTalentsDict["Pathofhealing"], classTalentsDict["Pathofshiftingshapes"], classTalentsDict["Pathofsight"]);
 
             static int pathofblade = MIN_LEVEL;
             static int pathofenemy = MIN_LEVEL;
             static int pathofshield = MIN_LEVEL;
 
-            AddClass("Fighter", "Fighter's talents", "Path of the Blade", "Path of the Enemy", "Path of the Shield", classTalentsDict["pathofblade"], classTalentsDict["pathofenemy"], classTalentsDict["pathofshield"]);
+            AddClass("Fighter", "Fighter's talents", "Path of the Blade", "Path of the Enemy", "Path of the Shield", classTalentsDict["Pathofblade"], classTalentsDict["Pathofenemy"], classTalentsDict["Pathofshield"]);
 
             static int pathofarrow = MIN_LEVEL;
             static int pathofbeast = MIN_LEVEL;
             static int pathofforest = MIN_LEVEL;
 
-            AddClass("Hunter", "Hunter's talents", "Path of the Arrow", "Path of the Beast", "Path of the Forest", classTalentsDict["pathofarrow"], classTalentsDict["pathofbeast"], classTalentsDict["pathofforest"]);
+            AddClass("Hunter", "Hunter's talents", "Path of the Arrow", "Path of the Beast", "Path of the Forest", classTalentsDict["Pathofarrow"], classTalentsDict["Pathofbeast"], classTalentsDict["Pathofforest"]);
 
             static int pathofthehymn = MIN_LEVEL;
             static int pathofsong = MIN_LEVEL;
             static int pathofwarcry = MIN_LEVEL;
 
-            AddClass("Ministrel", "Ministrel's talents", "Path of the Hymn", "Path of the Song", "Path of the Warcry", classTalentsDict["pathofthehymn"], classTalentsDict["pathofsong"], classTalentsDict["pathofwarcry"]);
+            AddClass("Ministrel", "Ministrel's talents", "Path of the Hymn", "Path of the Song", "Path of the Warcry", classTalentsDict["Pathofthehymn"], classTalentsDict["Pathofsong"], classTalentsDict["Pathofwarcry"]);
 
             static int pathofthegold = MIN_LEVEL;
             static int pathoflies = MIN_LEVEL;
             static int pathofmanythings = MIN_LEVEL;
 
-            AddClass("Peddler", "Peddler's talents", "Path of the Gold", "Path of the Lies", "Path of the Many Things", classTalentsDict["pathofthegold"], classTalentsDict["pathoflies"], classTalentsDict["pathofmanythings"]);
+            AddClass("Peddler", "Peddler's talents", "Path of the Gold", "Path of the Lies", "Path of the Many Things", classTalentsDict["Pathofthegold"], classTalentsDict["Pathoflies"], classTalentsDict["Pathofmanythings"]);
 
             static int pathofthecompanion = MIN_LEVEL;
             static int pathofknight = MIN_LEVEL;
             static int pathofplains = MIN_LEVEL;
 
-            AddClass("Rider", "Rider's talents", "Path of the Companion", "Path of the Knight", "Path of the Plains", classTalentsDict["pathofthecompanion"], classTalentsDict["pathofknight"], classTalentsDict["pathofplains"]);
+            AddClass("Rider", "Rider's talents", "Path of the Companion", "Path of the Knight", "Path of the Plains", classTalentsDict["Pathofthecompanion"], classTalentsDict["Pathofknight"], classTalentsDict["Pathofplains"]);
 
             static int pathoftheface = MIN_LEVEL;
             static int pathofkiller = MIN_LEVEL;
             static int pathofpoison = MIN_LEVEL;
 
-            AddClass("Rogue", "Rogue's talents", "Path of the Face", "Path of the Killer", "Path of Poison", classTalentsDict["pathoftheface"], classTalentsDict["pathofkiller"], classTalentsDict["pathofpoison"]);
+            AddClass("Rogue", "Rogue's talents", "Path of the Face", "Path of the Killer", "Path of Poison", classTalentsDict["Pathoftheface"], classTalentsDict["Pathofkiller"], classTalentsDict["Pathofpoison"]);
 
             ImGui::TableNextRow();
             ImGui::TableSetColumnIndex(0);
@@ -750,13 +807,13 @@ int main(int, char**)
                 static int pathofsigns = MIN_LEVEL;
                 static int pathofstone = MIN_LEVEL;
 
-                AddTalentSlider("Path of Blood", classTalentsDict["pathofblood"]);
+                AddTalentSlider("Path of Blood", classTalentsDict["Pathofblood"]);
 
-                AddTalentSlider("Path of Death", classTalentsDict["pathofdeath"]);
+                AddTalentSlider("Path of Death", classTalentsDict["Pathofdeath"]);
 
-                AddTalentSlider("Path of Signs", classTalentsDict["pathofsigns"]);
+                AddTalentSlider("Path of Signs", classTalentsDict["Pathofsigns"]);
 
-                AddTalentSlider("Path of Stone", classTalentsDict["pathofstone"]);
+                AddTalentSlider("Path of Stone", classTalentsDict["Pathofstone"]);
 
                 ImGui::EndTable();
             }
@@ -798,24 +855,71 @@ int main(int, char**)
             if (ImGui::Button("Button"))
                 clicked++;
 
-            int cost = 5;
+            int XPCost = 0;
 
             ImGui::Text("You gonna need:");
+
             if (clicked & 1)
             {
+                const char* chosenName = "";
+                if (item_current == 0)
+                {
+                    chosenName = attributeList[choosenAttribute];
+                    if (attributeDict[chosenName] == 2)
+                    {
+                        XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
+                        
+                        //TODO 3 should be defined by key ability it should be 3 or 4
+                        XPCost = XPCost + (3 * 3);
+                    }
+                }
+                
+                else if (item_current == 1) {
+                    chosenName = skillList[choosenSkill];
+                    
+                    if (skillDict[chosenName] == 0)
+                        XPCost = 5;
+                    if (skillDict[chosenName] == 1)
+                        XPCost = 10;
+                    if (skillDict[chosenName] == 2)
+                        XPCost = 15;
+                }
 
+                else if (item_current == 2)
+                {
+                    chosenName = generalTalentsList[choosenGeneralTalent];
+
+                    if (skillDict[chosenName] == 0)
+                        XPCost = 5;
+                    if (skillDict[chosenName] == 1)
+                        XPCost = 10;
+                    if (skillDict[chosenName] == 2)
+                        XPCost = 15;
+
+                }
+
+                else if (item_current == 3)
+                {
+                    chosenName = classTalentsList[choosenClassTalent];
+                    if (skillDict[chosenName] == 0)
+                        XPCost = 5;
+                    if (skillDict[chosenName] == 1)
+                        XPCost = 10;
+                    if (skillDict[chosenName] == 2)
+                        XPCost = 15;
+                }
+
+                ImGui::Text("Chosen Item: %s", chosenName);
+                ImGui::Text("%d", XPCost);
             }
-
-
-            for (const auto& pair : attributeDict) {
-                ImGui::Text(pair.first.c_str());
-                ImGui::Text(std::to_string(pair.second).c_str());
             
-            }
+            //for (const auto& pair : attributeDict) {
+            //    ImGui::Text(pair.first.c_str());
+            //    ImGui::Text(std::to_string(pair.second).c_str());
+            //
+            //}
 
-            //ImGui::Text("%d", attributeDict["agility"]);
-
-
+            //ImGui::Text("%d", skillDict["Might"]);
 
             ImGui::End();
         }
