@@ -41,6 +41,8 @@ static void glfw_error_callback(int error, const char* description)
 // CONST
 const int MAX_LEVEL = 5;
 const int MIN_LEVEL = 0;
+const int MIN_LEVEL_ATTRIBUTE = 2;
+
 const char* attributeList[] = {
     "Strength", 
     "Agility", 
@@ -296,6 +298,73 @@ void AddClass(const char* class_name, const char* class_talents, const char* tal
 
 }
 
+void AddAttribute(const char* element1, int& element1Value, const char* element2, int& element2Value, const char* element3, int& element3Value, const char* element4, int& element4Value)
+{
+    std::string m_element1 = element1;
+
+    if (std::islower(m_element1[0]))
+    {
+        m_element1[0] = std::toupper(m_element1[0]);
+    }
+
+    std::string m_element2 = element2;
+
+    if (std::islower(m_element2[0]))
+    {
+        m_element2[0] = std::toupper(m_element2[0]);
+    }
+
+    std::string m_element3 = element3;
+
+    if (std::islower(m_element3[0]))
+    {
+        m_element3[0] = std::toupper(m_element3[0]);
+    }
+
+    std::string m_element4 = element4;
+
+    if (std::islower(m_element4[0]))
+    {
+        m_element4[0] = std::toupper(m_element4[0]);
+    }
+
+    std::string superelement1 = "##" + std::string(element1);
+
+    ImGui::TableSetColumnIndex(0);
+    ImGui::Text(m_element1.c_str());
+    ImGui::TableSetColumnIndex(1);
+
+    ImGui::InputInt(superelement1.c_str(), &element1Value);
+    element1Value = std::min(std::max(element1Value, MIN_LEVEL_ATTRIBUTE), MAX_LEVEL);
+
+    std::string superelement2 = "##" + std::string(element2);
+
+    ImGui::TableSetColumnIndex(2);
+    ImGui::Text(m_element2.c_str());
+    ImGui::TableSetColumnIndex(3);
+
+    ImGui::InputInt(superelement2.c_str(), &element2Value);
+    element2Value = std::min(std::max(element2Value, MIN_LEVEL_ATTRIBUTE), MAX_LEVEL);
+
+    std::string superelement3 = "##" + std::string(element3);
+
+    ImGui::TableSetColumnIndex(4);
+    ImGui::Text(m_element3.c_str());
+    ImGui::TableSetColumnIndex(5);
+
+    ImGui::InputInt(superelement3.c_str(), &element3Value);
+    element3Value = std::min(std::max(element3Value, MIN_LEVEL_ATTRIBUTE), MAX_LEVEL);
+
+    std::string superelement4 = "##" + std::string(element4);
+
+    ImGui::TableSetColumnIndex(6);
+    ImGui::Text(m_element4.c_str());
+    ImGui::TableSetColumnIndex(7);
+
+    ImGui::InputInt(superelement4.c_str(), &element4Value);
+    element4Value = std::min(std::max(element4Value, MIN_LEVEL_ATTRIBUTE), MAX_LEVEL);
+}
+
 void AddAttributeOrSkill(const char* element1, int& element1Value, const char* element2, int& element2Value, const char* element3, int& element3Value, const char* element4, int& element4Value)
 {
     std::string m_element1 = element1;
@@ -541,6 +610,7 @@ int main(int, char**)
 
             // Create a window that doesn't move or resize
             ImGui::Begin("My Window", NULL, ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse);
+         
             
             // ATRIBUTE SECTION
                 ImGui::BeginTable("Atributes and Skills", 8);
@@ -553,7 +623,7 @@ int main(int, char**)
                 static int empathy = MIN_LEVEL;
 
 
-                AddAttributeOrSkill("strength", attributeDict["Strength"], "agility", attributeDict["Agility"], "wits", attributeDict["Wits"], "empathy", attributeDict["Empathy"]);
+                AddAttribute("strength", attributeDict["Strength"], "agility", attributeDict["Agility"], "wits", attributeDict["Wits"], "empathy", attributeDict["Empathy"]);
 
                 ImGui::TableNextRow();
 
@@ -570,7 +640,7 @@ int main(int, char**)
                 static int lore = MIN_LEVEL;
                 static int performance = MIN_LEVEL;
 
-                AddAttributeOrSkill("endurance", skillDict["Endurance"], "sleightofhands", skillDict["Sleightofhands"], "lore", skillDict["Lore"], "performance", skillDict["Performance"]);
+                AddAttributeOrSkill("endurance", skillDict["Endurance"], "sleightofhands", skillDict["Sleight of Hand"], "lore", skillDict["Lore"], "performance", skillDict["Performance"]);
                 ImGui::TableNextRow();
 
                 static int melee = MIN_LEVEL;
@@ -587,7 +657,7 @@ int main(int, char**)
                 static int insight = MIN_LEVEL;
                 static int animalhandling = MIN_LEVEL;
 
-                AddAttributeOrSkill("crafting", skillDict["Crafting"], "markmanship", skillDict["Markmanship"], "insight", skillDict["Insight"], "animalhandling", skillDict["Animalhandling"]);
+                AddAttributeOrSkill("crafting", skillDict["Crafting"], "marksmanship", skillDict["Marksmanship"], "insight", skillDict["Insight"], "animalhandling", skillDict["Animalhandling"]);
 
                 ImGui::EndTable();
             
@@ -865,13 +935,58 @@ int main(int, char**)
                 if (item_current == 0)
                 {
                     chosenName = attributeList[choosenAttribute];
-                    if (attributeDict[chosenName] == 2)
+                    if (chosenName == "Strength")
                     {
-                        XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
-                        
-                        //TODO 3 should be defined by key ability it should be 3 or 4
-                        XPCost = XPCost + (3 * 3);
+                        if (attributeDict[chosenName] == 2)
+                        {
+                            XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
+
+                            XPCost = XPCost + (3 * 3);
+                        }
+
+                        if (attributeDict[chosenName] == 3)
+                        {
+                            XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
+
+                            XPCost = XPCost + (4 * 3);
+                        }
+
+                        if (attributeDict[chosenName] == 4)
+                        {
+                            XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
+
+                            //XPCost = CalculateXPCostOfSkills("Stealth", "SleightOfHands", "Move", "Marksmanship");
+                            //
+                            //XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
+                            //
+                            //XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animalhandling");
+
+                            XPCost = XPCost + (5 * 3);
+                        }
                     }
+                    if (chosenName == "Agility")
+                    {
+                        if (attributeDict[chosenName] == 2)
+                        {
+                            XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
+                            XPCost = XPCost + (3 * 3);
+                        }
+
+                        if (attributeDict[chosenName] == 3)
+                        {
+                            XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
+                            XPCost = XPCost + (4 * 3);
+                        }
+
+                        if (attributeDict[chosenName] == 4)
+                        {
+                            XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
+                            XPCost = XPCost + (5 * 3);
+                        }
+                    }
+                        
+                    
+                    
                 }
                 
                 else if (item_current == 1) {
