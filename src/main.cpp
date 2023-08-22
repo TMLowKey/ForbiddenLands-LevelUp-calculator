@@ -657,7 +657,7 @@ int main(int, char**)
                 static int insight = MIN_LEVEL;
                 static int animalhandling = MIN_LEVEL;
 
-                AddAttributeOrSkill("crafting", skillDict["Crafting"], "marksmanship", skillDict["Marksmanship"], "insight", skillDict["Insight"], "animalhandling", skillDict["Animalhandling"]);
+                AddAttributeOrSkill("crafting", skillDict["Crafting"], "marksmanship", skillDict["Marksmanship"], "insight", skillDict["Insight"], "animalhandling", skillDict["Animal Handling"]);
 
                 ImGui::EndTable();
             
@@ -672,7 +672,6 @@ int main(int, char**)
 
             ImGui::TableSetColumnIndex(1);
             ImGui::Text("Class");
-
             ImGui::TableNextRow();
 
             ImGui::TableSetColumnIndex(0);
@@ -693,13 +692,16 @@ int main(int, char**)
             AddTalentSlider("Ambidextrous", skillDict["Ambidextrous"]);
 
             static int axefighter = MIN_LEVEL;
-            AddTalentSlider("Axe Fighter", skillDict["Axefighter"]);
+            AddTalentSlider("Axe Fighter", skillDict["Axe Fighter"]);
 
             static int berserk = MIN_LEVEL;
-            AddTalentSlider("Berserk", skillDict["Berserk"]);
+            AddTalentSlider("Berserker", skillDict["Berserker"]);
 
             static int bowyer = MIN_LEVEL;
             AddTalentSlider("Bowyer", skillDict["Bowyer"]);
+
+            static int brawler = MIN_LEVEL;
+            AddTalentSlider("Brawler", skillDict["Brawler"]);
 
             static int builder = MIN_LEVEL;
             AddTalentSlider("Builder", skillDict["Builder"]);
@@ -708,22 +710,25 @@ int main(int, char**)
             AddTalentSlider("Chef", skillDict["Chef"]);
 
             static int coldblooded = MIN_LEVEL;
-            AddTalentSlider("Cold Blooded", skillDict["Coldblooded"]);
+            AddTalentSlider("Cold Blooded", skillDict["Cold Blooded"]);
 
             static int defender = MIN_LEVEL;
             AddTalentSlider("Defender", skillDict["Defender"]);
 
             static int dragonslayer = MIN_LEVEL;
-            AddTalentSlider("Dragon Slayer", skillDict["Dragonslayer"]);
+            AddTalentSlider("Dragonslayer", skillDict["Dragonslayer"]);
 
             static int executioner = MIN_LEVEL;
             AddTalentSlider("Executioner", skillDict["Executioner"]);
 
             static int fastfootwork = MIN_LEVEL;
-            AddTalentSlider("Fast Footwork", skillDict["Fastfootwork"]);
+            AddTalentSlider("Fast Footwork", skillDict["Fast Footwork"]);
 
             static int fastshooter = MIN_LEVEL;
-            AddTalentSlider("Fast Shooter", skillDict["Fastshooter"]);
+            AddTalentSlider("Fast Shooter", skillDict["Fast Shooter"]);
+
+            static int Fearless = MIN_LEVEL;
+            AddTalentSlider("Fearless", skillDict["Fearless"]);
 
             static int firmgrip = MIN_LEVEL;
             AddTalentSlider("Firm Grip", skillDict["Firmgrip"]);
@@ -732,19 +737,21 @@ int main(int, char**)
             AddTalentSlider("Fisher", skillDict["Fisher"]);
 
             static int hammerfighter = MIN_LEVEL;
-            AddTalentSlider("Hammer Fighter", skillDict["Hammerfighter"]);
+            AddTalentSlider("Hammer Fighter", skillDict["Hammer Fighter"]);
 
             static int herbalist = MIN_LEVEL;
             AddTalentSlider("Herbalist", skillDict["Herbalist"]);
 
             static int horsebackfighter = MIN_LEVEL;
-            AddTalentSlider("Horseback Fighter", skillDict["Horsebackfighter"]);
+            AddTalentSlider("Horseback Fighter", skillDict["Horseback Fighter"]);
 
             static int incorruptible = MIN_LEVEL;
             AddTalentSlider("Incorruptible", skillDict["Incorruptible"]);
 
             static int knifefighter = MIN_LEVEL;
-            AddTalentSlider("Knife Fighter", skillDict["Knifefighter"]);
+            AddTalentSlider("Knife Fighter", skillDict["Knife Fighter"]);
+
+            AddTalentSlider("Lightning Fast", skillDict["Lightning Fast"]);
 
             static int lockpicker = MIN_LEVEL;
             AddTalentSlider("Lockpicker", skillDict["Lockpicker"]);
@@ -753,16 +760,16 @@ int main(int, char**)
             AddTalentSlider("Lucky", skillDict["Lucky"]);
 
             static int masterofthehunt = MIN_LEVEL;
-            AddTalentSlider("Master of the Hunt", skillDict["Masterofthehunt"]);
+            AddTalentSlider("Master of the Hunt", skillDict["Master of the Hunt"]);
 
             static int meleecharge = MIN_LEVEL;
-            AddTalentSlider("Melee Charge", skillDict["Meleecharge"]);
+            AddTalentSlider("Melee Charge", skillDict["Melee Charge"]);
 
             static int packrat = MIN_LEVEL;
-            AddTalentSlider("Pack Rat", skillDict["Packrat"]);
+            AddTalentSlider("Pack Rat", skillDict["Pack Rat"]);
 
             static int painresistant = MIN_LEVEL;
-            AddTalentSlider("Pain Resistant", skillDict["Painresistant"]);
+            AddTalentSlider("Pain Resistant", skillDict["Pain Resistant"]);
 
             static int pathfinder = MIN_LEVEL;
             AddTalentSlider("Pathfinder", skillDict["Pathfinder"]);
@@ -786,22 +793,22 @@ int main(int, char**)
             AddTalentSlider("Sharp Tongue", skillDict["Sharptongue"]);
 
             static int shieldfighter = MIN_LEVEL;
-            AddTalentSlider("Shield Fighter", skillDict["Shieldfighter"]);
+            AddTalentSlider("Shield Fighter", skillDict["Shield Fighter"]);
 
             static int sixthsense = MIN_LEVEL;
-            AddTalentSlider("Sixth Sense", skillDict["Sixthsense"]);
+            AddTalentSlider("Sixth Sense", skillDict["Sixth Sense"]);
 
             static int smith = MIN_LEVEL;
             AddTalentSlider("Smith", skillDict["Smith"]);
 
             static int spearfighter = MIN_LEVEL;
-            AddTalentSlider("Spear Fighter", skillDict["Spearfighter"]);
+            AddTalentSlider("Spear Fighter", skillDict["Spear Fighter"]);
 
             static int steadyfeet = MIN_LEVEL;
-            AddTalentSlider("Steady Feet", skillDict["Steadyfeet"]);
+            AddTalentSlider("Steady Feet", skillDict["Steady Feet"]);
 
             static int swordfighter = MIN_LEVEL;
-            AddTalentSlider("Sword Fighter", skillDict["Swordfighter"]);
+            AddTalentSlider("Sword Fighter", skillDict["Sword Fighter"]);
 
             static int tailor = MIN_LEVEL;
             AddTalentSlider("Tailor", skillDict["Tailor"]);
@@ -813,7 +820,7 @@ int main(int, char**)
             AddTalentSlider("Threatening", skillDict["Threatening"]);
 
             static int throwingarm = MIN_LEVEL;
-            AddTalentSlider("Throwing Arm", skillDict["Throwingarm"]);
+            AddTalentSlider("Throwing Arm", skillDict["Throwing Arm"]);
 
             static int wanderer = MIN_LEVEL;
             AddTalentSlider("Wanderer", skillDict["Wanderer"]);
@@ -824,80 +831,52 @@ int main(int, char**)
 
             ImGui::BeginTable("Class talents ", 1);
 
-            static int pathofhealing = MIN_LEVEL;
-            static int pathofshiftingshapes = MIN_LEVEL;
-            static int pathofsight = MIN_LEVEL;
 
-            AddClass("Druid", "Druid's talents", "Path of the Healing", "Path of the Shifting Shapes", "Path of the Sight", classTalentsDict["Pathofhealing"], classTalentsDict["Pathofshiftingshapes"], classTalentsDict["Pathofsight"]);
 
-            static int pathofblade = MIN_LEVEL;
-            static int pathofenemy = MIN_LEVEL;
-            static int pathofshield = MIN_LEVEL;
+            AddClass("Druid", "Druid's talents", "Path of Healing", "Path of Shifting Shapes", "Path of Sight", classTalentsDict["Path of Healing"], classTalentsDict["Path of Shifting Shapes"], classTalentsDict["Path of Sight"]);
 
-            AddClass("Fighter", "Fighter's talents", "Path of the Blade", "Path of the Enemy", "Path of the Shield", classTalentsDict["Pathofblade"], classTalentsDict["Pathofenemy"], classTalentsDict["Pathofshield"]);
+            AddClass("Fighter", "Fighter's talents", "Path of the Blade", "Path of the Enemy", "Path of the Shield", classTalentsDict["Path of The Blade"], classTalentsDict["Path of The Enemy"], classTalentsDict["Path of The Shield"]);
 
-            static int pathofarrow = MIN_LEVEL;
-            static int pathofbeast = MIN_LEVEL;
-            static int pathofforest = MIN_LEVEL;
+            AddClass("Hunter", "Hunter's talents", "Path of the Arrow", "Path of the Beast", "Path of the Forest", classTalentsDict["Path of The Arrow"], classTalentsDict["Path of The Beast"], classTalentsDict["Path of The Forest"]);
 
-            AddClass("Hunter", "Hunter's talents", "Path of the Arrow", "Path of the Beast", "Path of the Forest", classTalentsDict["Pathofarrow"], classTalentsDict["Pathofbeast"], classTalentsDict["Pathofforest"]);
+            AddClass("Ministrel", "Ministrel's talents", "Path of the Hymn", "Path of the Song", "Path of the Warcry", classTalentsDict["Path of The Hymn"], classTalentsDict["Path of The Song"], classTalentsDict["Path of The Warcry"]);
 
-            static int pathofthehymn = MIN_LEVEL;
-            static int pathofsong = MIN_LEVEL;
-            static int pathofwarcry = MIN_LEVEL;
+            AddClass("Peddler", "Peddler's talents", "Path of the Gold", "Path of the Lies", "Path of the Many Things", classTalentsDict["Path of Gold"], classTalentsDict["Path of Lies"], classTalentsDict["Path of Many Things"]);
 
-            AddClass("Ministrel", "Ministrel's talents", "Path of the Hymn", "Path of the Song", "Path of the Warcry", classTalentsDict["Pathofthehymn"], classTalentsDict["Pathofsong"], classTalentsDict["Pathofwarcry"]);
+            AddClass("Rider", "Rider's talents", "Path of the Companion", "Path of the Knight", "Path of the Plains", classTalentsDict["Path of The Companion"], classTalentsDict["Path of The Knight"], classTalentsDict["Path of The Plains"]);
 
-            static int pathofthegold = MIN_LEVEL;
-            static int pathoflies = MIN_LEVEL;
-            static int pathofmanythings = MIN_LEVEL;
-
-            AddClass("Peddler", "Peddler's talents", "Path of the Gold", "Path of the Lies", "Path of the Many Things", classTalentsDict["Pathofthegold"], classTalentsDict["Pathoflies"], classTalentsDict["Pathofmanythings"]);
-
-            static int pathofthecompanion = MIN_LEVEL;
-            static int pathofknight = MIN_LEVEL;
-            static int pathofplains = MIN_LEVEL;
-
-            AddClass("Rider", "Rider's talents", "Path of the Companion", "Path of the Knight", "Path of the Plains", classTalentsDict["Pathofthecompanion"], classTalentsDict["Pathofknight"], classTalentsDict["Pathofplains"]);
-
-            static int pathoftheface = MIN_LEVEL;
-            static int pathofkiller = MIN_LEVEL;
-            static int pathofpoison = MIN_LEVEL;
-
-            AddClass("Rogue", "Rogue's talents", "Path of the Face", "Path of the Killer", "Path of Poison", classTalentsDict["Pathoftheface"], classTalentsDict["Pathofkiller"], classTalentsDict["Pathofpoison"]);
+            AddClass("Rogue", "Rogue's talents", "Path of the Face", "Path of the Killer", "Path of Poison", classTalentsDict["Path of The Face"], classTalentsDict["Path of The Killer"], classTalentsDict["Path of Poison"]);
 
             ImGui::TableNextRow();
             ImGui::TableSetColumnIndex(0);
+
             if (ImGui::CollapsingHeader("Sorcerer", ImGuiTreeNodeFlags_None))
             {
                 ImGui::BeginTable("Sorcerer's talents", 2);
 
-                static int pathofblood = MIN_LEVEL;
-                static int pathofdeath = MIN_LEVEL;
-                static int pathofsigns = MIN_LEVEL;
-                static int pathofstone = MIN_LEVEL;
+                AddTalentSlider("Path of Blood", classTalentsDict["Path of Blood"]);
 
-                AddTalentSlider("Path of Blood", classTalentsDict["Pathofblood"]);
+                AddTalentSlider("Path of Death", classTalentsDict["Path of Death"]);
 
-                AddTalentSlider("Path of Death", classTalentsDict["Pathofdeath"]);
+                AddTalentSlider("Path of Signs", classTalentsDict["Path of Signs"]);
 
-                AddTalentSlider("Path of Signs", classTalentsDict["Pathofsigns"]);
-
-                AddTalentSlider("Path of Stone", classTalentsDict["Pathofstone"]);
+                AddTalentSlider("Path of Stone", classTalentsDict["Path of Stone"]);
 
                 ImGui::EndTable();
             }
 
-            ImGui::EndTable();
+            ImGui::Text("What is your class?");
+            const char* classes[] = { "Fighter", "Sorcerer", "Peddler", "Rogue", "Druid", "Ministrel", "Hunter", "Raider"};
+            static int choosenClass = 0;
 
-            ImGui::EndTable();
+            ImGui::Combo("##combo_classes", &choosenClass, classes , IM_ARRAYSIZE(classes));
 
             ImGui::Text("What do you want to level up?");
 
-            const char* items[] = { "Attribute", "Skill", "General Talent", "Class Talent"};
+            const char* items[] = { "Attribute", "Skill", "General Talent", "Class Talent" };
             static int item_current = 0;
 
-            ImGui::Combo("##combo", &item_current, items, IM_ARRAYSIZE(items));
+            ImGui::Combo("##combo_attribute", &item_current, items, IM_ARRAYSIZE(items));
 
             static int choosenAttribute = 0;
             static int choosenSkill = 0;
@@ -926,72 +905,728 @@ int main(int, char**)
                 clicked++;
 
             int XPCost = 0;
-
+            
+            // CALCULATIONS
             ImGui::Text("You gonna need:");
 
             if (clicked & 1)
             {
                 const char* chosenName = "";
+                // ATTRIBUTE IS CHOOSEN
                 if (item_current == 0)
                 {
                     chosenName = attributeList[choosenAttribute];
-                    if (chosenName == "Strength")
+                    // Fighter class 
+                    if (choosenClass == 0)
                     {
-                        if (attributeDict[chosenName] == 2)
+                        if (chosenName == "Strength")
                         {
-                            XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
 
-                            XPCost = XPCost + (3 * 3);
+                                XPCost = XPCost + (3 * 3);
+                            }
+
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
+
+                                XPCost = XPCost + (4 * 3);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
+
+                                XPCost = XPCost + (5 * 3);
+                            }
                         }
-
-                        if (attributeDict[chosenName] == 3)
+                        if (chosenName == "Agility")
                         {
-                            XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
+                                XPCost = XPCost + (3 * 4);
+                            }
 
-                            XPCost = XPCost + (4 * 3);
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
+                                XPCost = XPCost + (4 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
+                                XPCost = XPCost + (5 * 4);
+                            }
                         }
-
-                        if (attributeDict[chosenName] == 4)
+                        if (chosenName == "Empathy")
                         {
-                            XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
+                                XPCost = XPCost + (3 * 4);
+                            }
 
-                            //XPCost = CalculateXPCostOfSkills("Stealth", "SleightOfHands", "Move", "Marksmanship");
-                            //
-                            //XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
-                            //
-                            //XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animalhandling");
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
+                                XPCost = XPCost + (4 * 4);
+                            }
 
-                            XPCost = XPCost + (5 * 3);
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
+                                XPCost = XPCost + (5 * 4);
+                            }
+                        }
+                        if (chosenName == "Wits")
+                        {
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
+                                XPCost = XPCost + (3 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
+                                XPCost = XPCost + (4 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
+                                XPCost = XPCost + (5 * 4);
+                            }
+                        }
+                    }    
+
+                    // Sorcerer class
+                    if (choosenClass == 1)
+                    {
+                        if (chosenName == "Strength")
+                        {
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
+
+                                XPCost = XPCost + (3 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
+
+                                XPCost = XPCost + (4 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
+
+                                XPCost = XPCost + (5 * 4);
+                            }
+                        }
+                        if (chosenName == "Agility")
+                        {
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
+                                XPCost = XPCost + (3 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
+                                XPCost = XPCost + (4 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
+                                XPCost = XPCost + (5 * 4);
+                            }
+                        }
+                        if (chosenName == "Empathy")
+                        {
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
+                                XPCost = XPCost + (3 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
+                                XPCost = XPCost + (4 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
+                                XPCost = XPCost + (5 * 4);
+                            }
+                        }
+                        if (chosenName == "Wits")
+                        {
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
+                                XPCost = XPCost + (3 * 3);
+                            }
+
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
+                                XPCost = XPCost + (4 * 3);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
+                                XPCost = XPCost + (5 * 3);
+                            }
                         }
                     }
-                    if (chosenName == "Agility")
+
+                    // Peddler class
+                    if (choosenClass == 2)
                     {
-                        if (attributeDict[chosenName] == 2)
+                        if (chosenName == "Strength")
                         {
-                            XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
-                            XPCost = XPCost + (3 * 3);
-                        }
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
 
-                        if (attributeDict[chosenName] == 3)
-                        {
-                            XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
-                            XPCost = XPCost + (4 * 3);
-                        }
+                                XPCost = XPCost + (3 * 4);
+                            }
 
-                        if (attributeDict[chosenName] == 4)
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
+
+                                XPCost = XPCost + (4 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
+
+                                XPCost = XPCost + (5 * 4);
+                            }
+                        }
+                        if (chosenName == "Agility")
                         {
-                            XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
-                            XPCost = XPCost + (5 * 3);
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
+                                XPCost = XPCost + (3 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
+                                XPCost = XPCost + (4 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
+                                XPCost = XPCost + (5 * 4);
+                            }
+                        }
+                        if (chosenName == "Empathy")
+                        {
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
+                                XPCost = XPCost + (3 * 3);
+                            }
+
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
+                                XPCost = XPCost + (4 * 3);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
+                                XPCost = XPCost + (5 * 3);
+                            }
+                        }
+                        if (chosenName == "Wits")
+                        {
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
+                                XPCost = XPCost + (3 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
+                                XPCost = XPCost + (4 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
+                                XPCost = XPCost + (5 * 4);
+                            }
                         }
                     }
-                        
-                    
-                    
+
+                    // Rogue class
+                    if (choosenClass == 3)
+                    {
+                        if (chosenName == "Strength")
+                        {
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
+
+                                XPCost = XPCost + (3 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
+
+                                XPCost = XPCost + (4 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
+
+                                XPCost = XPCost + (5 * 4);
+                            }
+                        }
+                        if (chosenName == "Agility")
+                        {
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
+                                XPCost = XPCost + (3 * 3);
+                            }
+
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
+                                XPCost = XPCost + (4 * 3);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
+                                XPCost = XPCost + (5 * 3);
+                            }
+                        }
+                        if (chosenName == "Empathy")
+                        {
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
+                                XPCost = XPCost + (3 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
+                                XPCost = XPCost + (4 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
+                                XPCost = XPCost + (5 * 4);
+                            }
+                        }
+                        if (chosenName == "Wits")
+                        {
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
+                                XPCost = XPCost + (3 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
+                                XPCost = XPCost + (4 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
+                                XPCost = XPCost + (5 * 4);
+                            }
+                        }
+                    }
+
+                    // Druid class
+                    if (choosenClass == 4)
+                    {
+                        if (chosenName == "Strength")
+                        {
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
+
+                                XPCost = XPCost + (3 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
+
+                                XPCost = XPCost + (4 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
+
+                                XPCost = XPCost + (5 * 4);
+                            }
+                        }
+                        if (chosenName == "Agility")
+                        {
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
+                                XPCost = XPCost + (3 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
+                                XPCost = XPCost + (4 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
+                                XPCost = XPCost + (5 * 4);
+                            }
+                        }
+                        if (chosenName == "Empathy")
+                        {
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
+                                XPCost = XPCost + (3 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
+                                XPCost = XPCost + (4 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
+                                XPCost = XPCost + (5 * 4);
+                            }
+                        }
+                        if (chosenName == "Wits")
+                        {
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
+                                XPCost = XPCost + (3 * 3);
+                            }
+
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
+                                XPCost = XPCost + (4 * 3);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
+                                XPCost = XPCost + (5 * 3);
+                            }
+                        }
+                    }
+
+                    // Ministrel class
+                    if (choosenClass == 5)
+                    {
+                        if (chosenName == "Strength")
+                        {
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
+
+                                XPCost = XPCost + (3 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
+
+                                XPCost = XPCost + (4 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
+
+                                XPCost = XPCost + (5 * 4);
+                            }
+                        }
+                        if (chosenName == "Agility")
+                        {
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
+                                XPCost = XPCost + (3 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
+                                XPCost = XPCost + (4 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
+                                XPCost = XPCost + (5 * 4);
+                            }
+                        }
+                        if (chosenName == "Empathy")
+                        {
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
+                                XPCost = XPCost + (3 * 3);
+                            }
+
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
+                                XPCost = XPCost + (4 * 3);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
+                                XPCost = XPCost + (5 * 3);
+                            }
+                        }
+                        if (chosenName == "Wits")
+                        {
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
+                                XPCost = XPCost + (3 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
+                                XPCost = XPCost + (4 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
+                                XPCost = XPCost + (5 * 4);
+                            }
+                        }
+                    }
+
+                    // Hunter class
+                    if (choosenClass == 6)
+                    {
+                        if (chosenName == "Strength")
+                        {
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
+
+                                XPCost = XPCost + (3 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
+
+                                XPCost = XPCost + (4 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
+
+                                XPCost = XPCost + (5 * 4);
+                            }
+                        }
+                        if (chosenName == "Agility")
+                        {
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
+                                XPCost = XPCost + (3 * 3);
+                            }
+
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
+                                XPCost = XPCost + (4 * 3);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
+                                XPCost = XPCost + (5 * 3);
+                            }
+                        }
+                        if (chosenName == "Empathy")
+                        {
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
+                                XPCost = XPCost + (3 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
+                                XPCost = XPCost + (4 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
+                                XPCost = XPCost + (5 * 4);
+                            }
+                        }
+                        if (chosenName == "Wits")
+                        {
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
+                                XPCost = XPCost + (3 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
+                                XPCost = XPCost + (4 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
+                                XPCost = XPCost + (5 * 4);
+                            }
+                        }
+                    }
+
+                    // Rider class
+                    if (choosenClass == 7)
+                    {
+                        if (chosenName == "Strength")
+                        {
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
+
+                                XPCost = XPCost + (3 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
+
+                                XPCost = XPCost + (4 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Might", "Endurance", "Melee", "Crafting");
+
+                                XPCost = XPCost + (5 * 4);
+                            }
+                        }
+                        if (chosenName == "Agility")
+                        {
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
+                                XPCost = XPCost + (3 * 3);
+                            }
+
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
+                                XPCost = XPCost + (4 * 3);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
+                                XPCost = XPCost + (5 * 3);
+                            }
+                        }
+                        if (chosenName == "Empathy")
+                        {
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
+                                XPCost = XPCost + (3 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
+                                XPCost = XPCost + (4 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
+                                XPCost = XPCost + (5 * 4);
+                            }
+                        }
+                        if (chosenName == "Wits")
+                        {
+                            if (attributeDict[chosenName] == 2)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
+                                XPCost = XPCost + (3 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 3)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
+                                XPCost = XPCost + (4 * 4);
+                            }
+
+                            if (attributeDict[chosenName] == 4)
+                            {
+                                XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
+                                XPCost = XPCost + (5 * 4);
+                            }
+                        }
+                    }
+
+
                 }
-                
+
+                // SKILL IS CHOOSEN
                 else if (item_current == 1) {
                     chosenName = skillList[choosenSkill];
-                    
+
                     if (skillDict[chosenName] == 0)
                         XPCost = 5;
                     if (skillDict[chosenName] == 1)
@@ -1000,6 +1635,7 @@ int main(int, char**)
                         XPCost = 15;
                 }
 
+                // GENERAL TALENT IS CHOOSEN
                 else if (item_current == 2)
                 {
                     chosenName = generalTalentsList[choosenGeneralTalent];
@@ -1013,6 +1649,7 @@ int main(int, char**)
 
                 }
 
+                // CLASS TALENT IS CHOOSEN
                 else if (item_current == 3)
                 {
                     chosenName = classTalentsList[choosenClassTalent];
@@ -1027,14 +1664,13 @@ int main(int, char**)
                 ImGui::Text("Chosen Item: %s", chosenName);
                 ImGui::Text("%d", XPCost);
             }
-            
-            //for (const auto& pair : attributeDict) {
-            //    ImGui::Text(pair.first.c_str());
-            //    ImGui::Text(std::to_string(pair.second).c_str());
-            //
-            //}
 
-            //ImGui::Text("%d", skillDict["Might"]);
+
+            ImGui::EndTable();
+
+            ImGui::EndTable();
+
+            ImGui::Text("%d", skillDict["Path of Blood"]);
 
             ImGui::End();
         }
