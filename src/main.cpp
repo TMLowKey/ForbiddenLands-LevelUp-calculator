@@ -689,141 +689,141 @@ int main(int, char**)
             */
             
             static int ambidextrous = MIN_LEVEL;
-            AddTalentSlider("Ambidextrous", skillDict["Ambidextrous"]);
+            AddTalentSlider("Ambidextrous", generalTalentsDict["Ambidextrous"]);
 
             static int axefighter = MIN_LEVEL;
-            AddTalentSlider("Axe Fighter", skillDict["Axe Fighter"]);
+            AddTalentSlider("Axe Fighter", generalTalentsDict["Axe Fighter"]);
 
             static int berserk = MIN_LEVEL;
-            AddTalentSlider("Berserker", skillDict["Berserker"]);
+            AddTalentSlider("Berserker", generalTalentsDict["Berserker"]);
 
             static int bowyer = MIN_LEVEL;
-            AddTalentSlider("Bowyer", skillDict["Bowyer"]);
+            AddTalentSlider("Bowyer", generalTalentsDict["Bowyer"]);
 
             static int brawler = MIN_LEVEL;
-            AddTalentSlider("Brawler", skillDict["Brawler"]);
+            AddTalentSlider("Brawler", generalTalentsDict["Brawler"]);
 
             static int builder = MIN_LEVEL;
-            AddTalentSlider("Builder", skillDict["Builder"]);
+            AddTalentSlider("Builder", generalTalentsDict["Builder"]);
 
             static int chef = MIN_LEVEL;
-            AddTalentSlider("Chef", skillDict["Chef"]);
+            AddTalentSlider("Chef", generalTalentsDict["Chef"]);
 
             static int coldblooded = MIN_LEVEL;
-            AddTalentSlider("Cold Blooded", skillDict["Cold Blooded"]);
+            AddTalentSlider("Cold Blooded", generalTalentsDict["Cold Blooded"]);
 
             static int defender = MIN_LEVEL;
-            AddTalentSlider("Defender", skillDict["Defender"]);
+            AddTalentSlider("Defender", generalTalentsDict["Defender"]);
 
             static int dragonslayer = MIN_LEVEL;
-            AddTalentSlider("Dragonslayer", skillDict["Dragonslayer"]);
+            AddTalentSlider("Dragonslayer", generalTalentsDict["Dragonslayer"]);
 
             static int executioner = MIN_LEVEL;
-            AddTalentSlider("Executioner", skillDict["Executioner"]);
+            AddTalentSlider("Executioner", generalTalentsDict["Executioner"]);
 
             static int fastfootwork = MIN_LEVEL;
-            AddTalentSlider("Fast Footwork", skillDict["Fast Footwork"]);
+            AddTalentSlider("Fast Footwork", generalTalentsDict["Fast Footwork"]);
 
             static int fastshooter = MIN_LEVEL;
-            AddTalentSlider("Fast Shooter", skillDict["Fast Shooter"]);
+            AddTalentSlider("Fast Shooter", generalTalentsDict["Fast Shooter"]);
 
             static int Fearless = MIN_LEVEL;
-            AddTalentSlider("Fearless", skillDict["Fearless"]);
+            AddTalentSlider("Fearless", generalTalentsDict["Fearless"]);
 
             static int firmgrip = MIN_LEVEL;
-            AddTalentSlider("Firm Grip", skillDict["Firmgrip"]);
+            AddTalentSlider("Firm Grip", generalTalentsDict["Firmgrip"]);
 
             static int fisher = MIN_LEVEL;
-            AddTalentSlider("Fisher", skillDict["Fisher"]);
+            AddTalentSlider("Fisher", generalTalentsDict["Fisher"]);
 
             static int hammerfighter = MIN_LEVEL;
-            AddTalentSlider("Hammer Fighter", skillDict["Hammer Fighter"]);
+            AddTalentSlider("Hammer Fighter", generalTalentsDict["Hammer Fighter"]);
 
             static int herbalist = MIN_LEVEL;
-            AddTalentSlider("Herbalist", skillDict["Herbalist"]);
+            AddTalentSlider("Herbalist", generalTalentsDict["Herbalist"]);
 
             static int horsebackfighter = MIN_LEVEL;
-            AddTalentSlider("Horseback Fighter", skillDict["Horseback Fighter"]);
+            AddTalentSlider("Horseback Fighter", generalTalentsDict["Horseback Fighter"]);
 
             static int incorruptible = MIN_LEVEL;
-            AddTalentSlider("Incorruptible", skillDict["Incorruptible"]);
+            AddTalentSlider("Incorruptible", generalTalentsDict["Incorruptible"]);
 
             static int knifefighter = MIN_LEVEL;
-            AddTalentSlider("Knife Fighter", skillDict["Knife Fighter"]);
+            AddTalentSlider("Knife Fighter", generalTalentsDict["Knife Fighter"]);
 
-            AddTalentSlider("Lightning Fast", skillDict["Lightning Fast"]);
+            AddTalentSlider("Lightning Fast", generalTalentsDict["Lightning Fast"]);
 
             static int lockpicker = MIN_LEVEL;
-            AddTalentSlider("Lockpicker", skillDict["Lockpicker"]);
+            AddTalentSlider("Lockpicker", generalTalentsDict["Lockpicker"]);
 
             static int lucky = MIN_LEVEL;
-            AddTalentSlider("Lucky", skillDict["Lucky"]);
+            AddTalentSlider("Lucky", generalTalentsDict["Lucky"]);
 
             static int masterofthehunt = MIN_LEVEL;
-            AddTalentSlider("Master of the Hunt", skillDict["Master of the Hunt"]);
+            AddTalentSlider("Master of the Hunt", generalTalentsDict["Master of the Hunt"]);
 
             static int meleecharge = MIN_LEVEL;
-            AddTalentSlider("Melee Charge", skillDict["Melee Charge"]);
+            AddTalentSlider("Melee Charge", generalTalentsDict["Melee Charge"]);
 
             static int packrat = MIN_LEVEL;
-            AddTalentSlider("Pack Rat", skillDict["Pack Rat"]);
+            AddTalentSlider("Pack Rat", generalTalentsDict["Pack Rat"]);
 
             static int painresistant = MIN_LEVEL;
-            AddTalentSlider("Pain Resistant", skillDict["Pain Resistant"]);
+            AddTalentSlider("Pain Resistant", generalTalentsDict["Pain Resistant"]);
 
             static int pathfinder = MIN_LEVEL;
-            AddTalentSlider("Pathfinder", skillDict["Pathfinder"]);
+            AddTalentSlider("Pathfinder", generalTalentsDict["Pathfinder"]);
 
             static int poisoner = MIN_LEVEL;
-            AddTalentSlider("Poisoner", skillDict["Poisoner"]);
+            AddTalentSlider("Poisoner", generalTalentsDict["Poisoner"]);
 
             static int quartermaster = MIN_LEVEL;
-            AddTalentSlider("Quartermaster", skillDict["Quartermaster"]);
+            AddTalentSlider("Quartermaster", generalTalentsDict["Quartermaster"]);
 
             static int quickdraw = MIN_LEVEL;
-            AddTalentSlider("Quickdraw", skillDict["Quickdraw"]);
+            AddTalentSlider("Quickdraw", generalTalentsDict["Quickdraw"]);
 
             static int sailor = MIN_LEVEL;
-            AddTalentSlider("Sailor", skillDict["Sailor"]);
+            AddTalentSlider("Sailor", generalTalentsDict["Sailor"]);
 
             static int sharpshooter = MIN_LEVEL;
-            AddTalentSlider("Sharpshooter", skillDict["Sharpshooter"]);
+            AddTalentSlider("Sharpshooter", generalTalentsDict["Sharpshooter"]);
 
             static int sharptongue = MIN_LEVEL;
-            AddTalentSlider("Sharp Tongue", skillDict["Sharptongue"]);
+            AddTalentSlider("Sharp Tongue", generalTalentsDict["Sharptongue"]);
 
             static int shieldfighter = MIN_LEVEL;
-            AddTalentSlider("Shield Fighter", skillDict["Shield Fighter"]);
+            AddTalentSlider("Shield Fighter", generalTalentsDict["Shield Fighter"]);
 
             static int sixthsense = MIN_LEVEL;
-            AddTalentSlider("Sixth Sense", skillDict["Sixth Sense"]);
+            AddTalentSlider("Sixth Sense", generalTalentsDict["Sixth Sense"]);
 
             static int smith = MIN_LEVEL;
-            AddTalentSlider("Smith", skillDict["Smith"]);
+            AddTalentSlider("Smith", generalTalentsDict["Smith"]);
 
             static int spearfighter = MIN_LEVEL;
-            AddTalentSlider("Spear Fighter", skillDict["Spear Fighter"]);
+            AddTalentSlider("Spear Fighter", generalTalentsDict["Spear Fighter"]);
 
             static int steadyfeet = MIN_LEVEL;
-            AddTalentSlider("Steady Feet", skillDict["Steady Feet"]);
+            AddTalentSlider("Steady Feet", generalTalentsDict["Steady Feet"]);
 
             static int swordfighter = MIN_LEVEL;
-            AddTalentSlider("Sword Fighter", skillDict["Sword Fighter"]);
+            AddTalentSlider("Sword Fighter", generalTalentsDict["Sword Fighter"]);
 
             static int tailor = MIN_LEVEL;
-            AddTalentSlider("Tailor", skillDict["Tailor"]);
+            AddTalentSlider("Tailor", generalTalentsDict["Tailor"]);
 
             static int tanner = MIN_LEVEL;
-            AddTalentSlider("Tanner", skillDict["Tanner"]);
+            AddTalentSlider("Tanner", generalTalentsDict["Tanner"]);
 
             static int threatening = MIN_LEVEL;
-            AddTalentSlider("Threatening", skillDict["Threatening"]);
+            AddTalentSlider("Threatening", generalTalentsDict["Threatening"]);
 
             static int throwingarm = MIN_LEVEL;
-            AddTalentSlider("Throwing Arm", skillDict["Throwing Arm"]);
+            AddTalentSlider("Throwing Arm", generalTalentsDict["Throwing Arm"]);
 
             static int wanderer = MIN_LEVEL;
-            AddTalentSlider("Wanderer", skillDict["Wanderer"]);
+            AddTalentSlider("Wanderer", generalTalentsDict["Wanderer"]);
 
             ImGui::EndTable();
 
@@ -882,6 +882,7 @@ int main(int, char**)
             static int choosenSkill = 0;
             static int choosenGeneralTalent = 0;
             static int choosenClassTalent = 0;
+            bool is_max_level = false;
 
             if (item_current == 0)
             {
@@ -941,6 +942,10 @@ int main(int, char**)
 
                                 XPCost = XPCost + (5 * 3);
                             }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
+                            }
                         }
                         if (chosenName == "Agility")
                         {
@@ -960,6 +965,10 @@ int main(int, char**)
                             {
                                 XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
                                 XPCost = XPCost + (5 * 4);
+                            }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
                             }
                         }
                         if (chosenName == "Empathy")
@@ -981,6 +990,10 @@ int main(int, char**)
                                 XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
                                 XPCost = XPCost + (5 * 4);
                             }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
+                            }
                         }
                         if (chosenName == "Wits")
                         {
@@ -1000,6 +1013,10 @@ int main(int, char**)
                             {
                                 XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
                                 XPCost = XPCost + (5 * 4);
+                            }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
                             }
                         }
                     }    
@@ -1029,6 +1046,10 @@ int main(int, char**)
 
                                 XPCost = XPCost + (5 * 4);
                             }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
+                            }
                         }
                         if (chosenName == "Agility")
                         {
@@ -1048,6 +1069,10 @@ int main(int, char**)
                             {
                                 XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
                                 XPCost = XPCost + (5 * 4);
+                            }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
                             }
                         }
                         if (chosenName == "Empathy")
@@ -1069,6 +1094,10 @@ int main(int, char**)
                                 XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
                                 XPCost = XPCost + (5 * 4);
                             }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
+                            }
                         }
                         if (chosenName == "Wits")
                         {
@@ -1088,6 +1117,10 @@ int main(int, char**)
                             {
                                 XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
                                 XPCost = XPCost + (5 * 3);
+                            }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
                             }
                         }
                     }
@@ -1117,6 +1150,10 @@ int main(int, char**)
 
                                 XPCost = XPCost + (5 * 4);
                             }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
+                            }
                         }
                         if (chosenName == "Agility")
                         {
@@ -1136,6 +1173,10 @@ int main(int, char**)
                             {
                                 XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
                                 XPCost = XPCost + (5 * 4);
+                            }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
                             }
                         }
                         if (chosenName == "Empathy")
@@ -1157,6 +1198,10 @@ int main(int, char**)
                                 XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
                                 XPCost = XPCost + (5 * 3);
                             }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
+                            }
                         }
                         if (chosenName == "Wits")
                         {
@@ -1176,6 +1221,10 @@ int main(int, char**)
                             {
                                 XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
                                 XPCost = XPCost + (5 * 4);
+                            }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
                             }
                         }
                     }
@@ -1205,6 +1254,10 @@ int main(int, char**)
 
                                 XPCost = XPCost + (5 * 4);
                             }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
+                            }
                         }
                         if (chosenName == "Agility")
                         {
@@ -1224,6 +1277,10 @@ int main(int, char**)
                             {
                                 XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
                                 XPCost = XPCost + (5 * 3);
+                            }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
                             }
                         }
                         if (chosenName == "Empathy")
@@ -1245,6 +1302,10 @@ int main(int, char**)
                                 XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
                                 XPCost = XPCost + (5 * 4);
                             }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
+                            }
                         }
                         if (chosenName == "Wits")
                         {
@@ -1264,6 +1325,10 @@ int main(int, char**)
                             {
                                 XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
                                 XPCost = XPCost + (5 * 4);
+                            }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
                             }
                         }
                     }
@@ -1293,6 +1358,10 @@ int main(int, char**)
 
                                 XPCost = XPCost + (5 * 4);
                             }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
+                            }
                         }
                         if (chosenName == "Agility")
                         {
@@ -1312,6 +1381,10 @@ int main(int, char**)
                             {
                                 XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
                                 XPCost = XPCost + (5 * 4);
+                            }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
                             }
                         }
                         if (chosenName == "Empathy")
@@ -1333,6 +1406,10 @@ int main(int, char**)
                                 XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
                                 XPCost = XPCost + (5 * 4);
                             }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
+                            }
                         }
                         if (chosenName == "Wits")
                         {
@@ -1352,6 +1429,10 @@ int main(int, char**)
                             {
                                 XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
                                 XPCost = XPCost + (5 * 3);
+                            }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
                             }
                         }
                     }
@@ -1381,6 +1462,10 @@ int main(int, char**)
 
                                 XPCost = XPCost + (5 * 4);
                             }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
+                            }
                         }
                         if (chosenName == "Agility")
                         {
@@ -1400,6 +1485,10 @@ int main(int, char**)
                             {
                                 XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
                                 XPCost = XPCost + (5 * 4);
+                            }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
                             }
                         }
                         if (chosenName == "Empathy")
@@ -1421,6 +1510,10 @@ int main(int, char**)
                                 XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
                                 XPCost = XPCost + (5 * 3);
                             }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
+                            }
                         }
                         if (chosenName == "Wits")
                         {
@@ -1440,6 +1533,10 @@ int main(int, char**)
                             {
                                 XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
                                 XPCost = XPCost + (5 * 4);
+                            }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
                             }
                         }
                     }
@@ -1469,6 +1566,10 @@ int main(int, char**)
 
                                 XPCost = XPCost + (5 * 4);
                             }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
+                            }
                         }
                         if (chosenName == "Agility")
                         {
@@ -1488,6 +1589,10 @@ int main(int, char**)
                             {
                                 XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
                                 XPCost = XPCost + (5 * 3);
+                            }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
                             }
                         }
                         if (chosenName == "Empathy")
@@ -1509,6 +1614,10 @@ int main(int, char**)
                                 XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
                                 XPCost = XPCost + (5 * 4);
                             }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
+                            }
                         }
                         if (chosenName == "Wits")
                         {
@@ -1528,6 +1637,10 @@ int main(int, char**)
                             {
                                 XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
                                 XPCost = XPCost + (5 * 4);
+                            }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
                             }
                         }
                     }
@@ -1557,6 +1670,10 @@ int main(int, char**)
 
                                 XPCost = XPCost + (5 * 4);
                             }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
+                            }
                         }
                         if (chosenName == "Agility")
                         {
@@ -1576,6 +1693,10 @@ int main(int, char**)
                             {
                                 XPCost = CalculateXPCostOfSkills("Stealth", "Sleight of Hand", "Move", "Marksmanship");
                                 XPCost = XPCost + (5 * 3);
+                            }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
                             }
                         }
                         if (chosenName == "Empathy")
@@ -1597,6 +1718,10 @@ int main(int, char**)
                                 XPCost = CalculateXPCostOfSkills("Manipulation", "Performance", "Healing", "Animal Handling");
                                 XPCost = XPCost + (5 * 4);
                             }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
+                            }
                         }
                         if (chosenName == "Wits")
                         {
@@ -1617,6 +1742,10 @@ int main(int, char**)
                                 XPCost = CalculateXPCostOfSkills("Scouting", "Lore", "Survival", "Insight");
                                 XPCost = XPCost + (5 * 4);
                             }
+                            if (attributeDict[chosenName] == 5)
+                            {
+                                is_max_level = true;
+                            }
                         }
                     }
 
@@ -1633,6 +1762,13 @@ int main(int, char**)
                         XPCost = 10;
                     if (skillDict[chosenName] == 2)
                         XPCost = 15;
+                    if (skillDict[chosenName] == 3)
+                        XPCost = 20;
+                    if (skillDict[chosenName] == 4)
+                        XPCost = 25;
+                    if (skillDict[chosenName] == 5)
+                        is_max_level = true;
+
                 }
 
                 // GENERAL TALENT IS CHOOSEN
@@ -1640,37 +1776,48 @@ int main(int, char**)
                 {
                     chosenName = generalTalentsList[choosenGeneralTalent];
 
-                    if (skillDict[chosenName] == 0)
+                    if (generalTalentsDict[chosenName] == 0)
                         XPCost = 5;
-                    if (skillDict[chosenName] == 1)
+                    if (generalTalentsDict[chosenName] == 1)
                         XPCost = 10;
-                    if (skillDict[chosenName] == 2)
+                    if (generalTalentsDict[chosenName] == 2)
                         XPCost = 15;
-
+                    if (generalTalentsDict[chosenName] == 3)
+                        is_max_level = true;
                 }
 
                 // CLASS TALENT IS CHOOSEN
                 else if (item_current == 3)
                 {
                     chosenName = classTalentsList[choosenClassTalent];
-                    if (skillDict[chosenName] == 0)
+                    if (classTalentsDict[chosenName] == 0)
                         XPCost = 5;
-                    if (skillDict[chosenName] == 1)
+                    if (classTalentsDict[chosenName] == 1)
                         XPCost = 10;
-                    if (skillDict[chosenName] == 2)
+                    if (classTalentsDict[chosenName] == 2)
                         XPCost = 15;
+                    if (classTalentsDict[chosenName] == 3)
+                        is_max_level = true;
+
                 }
 
                 ImGui::Text("Chosen Item: %s", chosenName);
-                ImGui::Text("%d", XPCost);
+
+                if (is_max_level)
+                {
+                    ImGui::Text("Item is already max level.");
+
+                }
+                else
+                {
+                    ImGui::Text("%d", XPCost);
+                }
             }
 
 
             ImGui::EndTable();
 
             ImGui::EndTable();
-
-            ImGui::Text("%d", skillDict["Path of Blood"]);
 
             ImGui::End();
         }
