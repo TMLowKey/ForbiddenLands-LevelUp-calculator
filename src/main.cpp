@@ -522,7 +522,7 @@ int main(int, char**)
 #endif
 
     // Create window with graphics context
-    GLFWwindow* window = glfwCreateWindow(1280, 720, "Dear ImGui GLFW+OpenGL3 example", nullptr, nullptr);
+    GLFWwindow* window = glfwCreateWindow(1280, 720, "Forbidden Lands LevelUP", nullptr, nullptr);
     if (window == nullptr)
         return 1;
     glfwMakeContextCurrent(window);
@@ -609,7 +609,7 @@ int main(int, char**)
             ImGui::SetNextWindowSize(window_size, ImGuiCond_Always); // This will set the window's size to the size of the viewport
 
             // Create a window that doesn't move or resize
-            ImGui::Begin("My Window", NULL, ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse);
+            ImGui::Begin("", NULL, ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse);
          
             
             // ATRIBUTE SECTION
