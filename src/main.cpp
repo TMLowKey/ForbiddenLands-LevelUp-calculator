@@ -572,6 +572,16 @@ int main(int, char**)
     //ImFont* font = io.Fonts->AddFontFromFileTTF("c:\\Windows\\Fonts\\ArialUni.ttf", 18.0f, nullptr, io.Fonts->GetGlyphRangesJapanese());
     //IM_ASSERT(font != nullptr);
 
+    io.Fonts->AddFontDefault();
+    ImFont* mainfont = io.Fonts->AddFontFromFileTTF("C:\\git\\FLCalc\\vendor\\Fonts\\IM_Fell_Great_Primer\\IMFellGreatPrimer-Regular.ttf", 18.5f);      //TODO Change relative path to fonts
+    ImFont* secondaryfont = io.Fonts->AddFontFromFileTTF("C:\\git\\FLCalc\\vendor\\Fonts\\IM_Fell_Great_Primer\\IMFellGreatPrimer-Regular.ttf", 25.0f);      //TODO Change relative path to fonts
+    ImFont* rewardfont = io.Fonts->AddFontFromFileTTF("C:\\git\\FLCalc\\vendor\\Fonts\\IM_Fell_Great_Primer\\IMFellGreatPrimer-Regular.ttf", 30.0f);      //TODO Change relative path to fonts
+
+
+    IM_ASSERT(mainfont != NULL);
+    IM_ASSERT(secondaryfont != NULL);
+
+
     // Our state
     bool show_demo_window = true;
     bool show_another_window = false;
@@ -611,8 +621,14 @@ int main(int, char**)
             // Create a window that doesn't move or resize
             ImGui::Begin("", NULL, ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse);
          
+            ImGui::PushFont(mainfont);
             
             // ATRIBUTE SECTION
+                ImGui::PushFont(secondaryfont);
+                ImGui::Text("Attribute and Skills");
+                ImGui::PopFont();
+
+                ImGui::PushFont(mainfont);
                 ImGui::BeginTable("Atributes and Skills", 8);
 
                 ImGui::TableNextRow();
@@ -660,9 +676,12 @@ int main(int, char**)
                 AddAttributeOrSkill("crafting", skillDict["Crafting"], "marksmanship", skillDict["Marksmanship"], "insight", skillDict["Insight"], "animalhandling", skillDict["Animal Handling"]);
 
                 ImGui::EndTable();
+
+                ImGui::PopFont();
             
 
             // TALENT SECTION
+            ImGui::PushFont(secondaryfont);
             ImGui::BeginTable("Talents", 2);
 
             ImGui::TableNextRow();
@@ -677,7 +696,7 @@ int main(int, char**)
             ImGui::TableSetColumnIndex(0);
 
             ImGui::BeginTable("General talents", 2);
-
+            ImGui::PopFont();
             /*
             int talentsLevel[IM_ARRAYSIZE(generalTalentsList)]; // create a new array
 
@@ -687,7 +706,7 @@ int main(int, char**)
                 AddTalentSlider(generalTalentsList[i], talentsLevel[i]);
             }
             */
-            
+            ImGui::PushFont(mainfont);
             static int ambidextrous = MIN_LEVEL;
             AddTalentSlider("Ambidextrous", generalTalentsDict["Ambidextrous"]);
 
@@ -864,7 +883,11 @@ int main(int, char**)
 
                 ImGui::EndTable();
             }
+            ImGui::PushFont(secondaryfont);
+            ImGui::Text("Calculate your level up!");
+            ImGui::PopFont();
 
+            ImGui::PushFont(mainfont);
             ImGui::Text("What is your class?");
             const char* classes[] = { "Fighter", "Sorcerer", "Peddler", "Rogue", "Druid", "Ministrel", "Hunter", "Raider"};
             static int choosenClass = 0;
@@ -902,7 +925,7 @@ int main(int, char**)
             }
 
             static int clicked = 0;
-            if (ImGui::Button("Button"))
+            if (ImGui::Button("Calculate"))
                 clicked++;
 
             int XPCost = 0;
@@ -1800,9 +1823,11 @@ int main(int, char**)
                         is_max_level = true;
 
                 }
+                // DEBUG choosen item
+                // ImGui::Text("Chosen Item: %s", chosenName);
+                ImGui::PopFont();
 
-                ImGui::Text("Chosen Item: %s", chosenName);
-
+                ImGui::PushFont(rewardfont);
                 if (is_max_level)
                 {
                     ImGui::Text("Item is already max level.");
@@ -1810,8 +1835,9 @@ int main(int, char**)
                 }
                 else
                 {
-                    ImGui::Text("%d", XPCost);
+                    ImGui::Text("%d XP", XPCost);
                 }
+                ImGui::PopFont();
             }
 
 
