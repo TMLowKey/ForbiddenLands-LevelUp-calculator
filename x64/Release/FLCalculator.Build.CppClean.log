@@ -7,12 +7,11 @@ g:\05_dev\flcalc\x64\release\imgui_draw.obj
 g:\05_dev\flcalc\x64\release\imgui_demo.obj
 g:\05_dev\flcalc\x64\release\imgui.obj
 g:\05_dev\flcalc\x64\release\main.obj
-c:\git\flcalc\x64\release\flcalculator.ipdb
-c:\git\flcalc\x64\release\flcalculator.iobj
 g:\05_dev\flcalc\x64\release\flcalculator.ipdb
 g:\05_dev\flcalc\x64\release\flcalculator.iobj
 g:\05_dev\flcalc\x64\release\flcalculator.exe
 g:\05_dev\flcalc\x64\release\flcalculator.pdb
+g:\05_dev\flcalc\x64\release\flcalculator.res
 g:\05_dev\flcalc\x64\release\flcalculator.tlog\cl.command.1.tlog
 g:\05_dev\flcalc\x64\release\flcalculator.tlog\cl.items.tlog
 g:\05_dev\flcalc\x64\release\flcalculator.tlog\cl.read.1.tlog
@@ -21,3 +20,6 @@ g:\05_dev\flcalc\x64\release\flcalculator.tlog\link.command.1.tlog
 g:\05_dev\flcalc\x64\release\flcalculator.tlog\link.read.1.tlog
 g:\05_dev\flcalc\x64\release\flcalculator.tlog\link.write.1.tlog
 g:\05_dev\flcalc\x64\release\flcalculator.tlog\link.write.2u.tlog
+g:\05_dev\flcalc\x64\release\flcalculator.tlog\rc.command.1.tlog
+g:\05_dev\flcalc\x64\release\flcalculator.tlog\rc.read.1.tlog
+g:\05_dev\flcalc\x64\release\flcalculator.tlog\rc.write.1.tlog

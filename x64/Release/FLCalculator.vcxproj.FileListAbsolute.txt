@@ -1,1 +1,2 @@
 C:\git\FLCalc\x64\Release\FLCalculator.exe
+G:\05_Dev\FLCalc\x64\Release\FLCalculator.exe

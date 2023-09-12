@@ -68,5 +68,18 @@
     <ClInclude Include="vendor\IamGuiNecessary\imstb_truetype.h">
       <Filter>Hlavičkové soubory</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Hlavičkové soubory</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="FLCalculator.rc">
+      <Filter>Soubory zdrojů</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="C:\Users\marek\Desktop\ForbiddeCalculatorIcon.ico">
+      <Filter>Soubory zdrojů</Filter>
+    </Image>
   </ItemGroup>
 </Project>

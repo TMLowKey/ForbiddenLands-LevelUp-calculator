@@ -1,1 +1,5 @@
-﻿
+﻿  Generating code
+  Previous IPDB and IOBJ mismatch, fall back to full compilation.
+  All 2207 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  FLCalculator.vcxproj -> G:\05_Dev\FLCalc\x64\Release\FLCalculator.exe
