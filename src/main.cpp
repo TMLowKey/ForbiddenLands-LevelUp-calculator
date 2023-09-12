@@ -36,6 +36,7 @@ static void glfw_error_callback(int error, const char* description)
 #include <cctype>
 #include <map>
 #include <iostream>
+#include <filesystem>
 
 
 // CONST
@@ -571,11 +572,14 @@ int main(int, char**)
     //io.Fonts->AddFontFromFileTTF("../../misc/fonts/Cousine-Regular.ttf", 15.0f);
     //ImFont* font = io.Fonts->AddFontFromFileTTF("c:\\Windows\\Fonts\\ArialUni.ttf", 18.0f, nullptr, io.Fonts->GetGlyphRangesJapanese());
     //IM_ASSERT(font != nullptr);
-    io.Fonts->AddFontDefault();
-    ImFont* mainfont = io.Fonts->AddFontFromFileTTF("C:\\git\\FLCalc\\vendor\\Fonts\\IM_Fell_Great_Primer\\IMFellGreatPrimer-Regular.ttf", 18.5f);      //TODO Change relative path to fonts
-    ImFont* secondaryfont = io.Fonts->AddFontFromFileTTF("C:\\git\\FLCalc\\vendor\\Fonts\\IM_Fell_Great_Primer\\IMFellGreatPrimer-Regular.ttf", 25.0f);      //TODO Change relative path to fonts
-    ImFont* rewardfont = io.Fonts->AddFontFromFileTTF("C:\\git\\FLCalc\\vendor\\Fonts\\IM_Fell_Great_Primer\\IMFellGreatPrimer-Regular.ttf", 30.0f);      //TODO Change relative path to fonts
 
+    std::string relativeFontPath = "vendor/Fonts/IM_Fell_Great_Primer/IMFellGreatPrimer-Regular.ttf";
+
+
+    io.Fonts->AddFontDefault();
+    ImFont* mainfont = io.Fonts->AddFontFromFileTTF(relativeFontPath.c_str(), 18.5f);
+    ImFont* secondaryfont = io.Fonts->AddFontFromFileTTF(relativeFontPath.c_str(), 25.0f);
+    ImFont* rewardfont = io.Fonts->AddFontFromFileTTF(relativeFontPath.c_str(), 30.0f);
 
     IM_ASSERT(mainfont != NULL);
     IM_ASSERT(secondaryfont != NULL);
