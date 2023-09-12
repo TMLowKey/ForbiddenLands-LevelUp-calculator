@@ -571,7 +571,6 @@ int main(int, char**)
     //io.Fonts->AddFontFromFileTTF("../../misc/fonts/Cousine-Regular.ttf", 15.0f);
     //ImFont* font = io.Fonts->AddFontFromFileTTF("c:\\Windows\\Fonts\\ArialUni.ttf", 18.0f, nullptr, io.Fonts->GetGlyphRangesJapanese());
     //IM_ASSERT(font != nullptr);
-
     io.Fonts->AddFontDefault();
     ImFont* mainfont = io.Fonts->AddFontFromFileTTF("C:\\git\\FLCalc\\vendor\\Fonts\\IM_Fell_Great_Primer\\IMFellGreatPrimer-Regular.ttf", 18.5f);      //TODO Change relative path to fonts
     ImFont* secondaryfont = io.Fonts->AddFontFromFileTTF("C:\\git\\FLCalc\\vendor\\Fonts\\IM_Fell_Great_Primer\\IMFellGreatPrimer-Regular.ttf", 25.0f);      //TODO Change relative path to fonts
@@ -620,7 +619,7 @@ int main(int, char**)
 
             // Create a window that doesn't move or resize
             ImGui::Begin("", NULL, ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse);
-         
+      
             ImGui::PushFont(mainfont);
             
             // ATRIBUTE SECTION
@@ -1839,7 +1838,6 @@ int main(int, char**)
                 }
                 ImGui::PopFont();
             }
-
 
             ImGui::EndTable();
 
